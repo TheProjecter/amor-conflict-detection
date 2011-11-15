@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.modelversioning.conflicts/src"
+    modelPluginID="org.modelversioning.conflicts" modelName="ConflictReport" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.modelversioning.core.conditions/models/conditions.genmodel#//conditions conflict.genmodel#//conflict platform:/plugin/org.eclipse.emf.compare.diff/model/diff.genmodel#//diff platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.eclipse.emf.compare.match/model/match.genmodel#//match platform:/plugin/org.eclipse.ocl/model/OCL.genmodel#//ocl platform:/plugin/org.eclipse.ocl.ecore/model/OCLEcore.genmodel#//ocl">
+  <foreignModel>conflictReport.ecore</foreignModel>
+  <genPackages prefix="ConflictReport" basePackage="org.modelversioning" resource="XML"
+      disposableProviderFactory="true" ecorePackage="conflictReport.ecore#/">
+    <genClasses ecoreClass="conflictReport.ecore#//ConflictReport">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference conflictReport.ecore#//ConflictReport/conflicts"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

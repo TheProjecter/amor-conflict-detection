@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="conflict"
+    nsURI="http://modelversioning.org/conflict/1.0" nsPrefix="conflict">
+  <eClassifiers xsi:type="ecore:EClass" name="Conflict" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftChange" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightChange" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OverlappingChange" abstract="true" eSuperTypes="#//Conflict"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MetamodelViolation" eSuperTypes="#//Violation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="violatedConstraint" eType="#//Constraint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationContractViolation" eSuperTypes="#//Violation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagnostics" lowerBound="1"
+        eType="#//OperationContractDiagnostics" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UpdateUpdate" eSuperTypes="#//OverlappingChange"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeleteUpdate" eSuperTypes="#//OverlappingChange"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AddAdd" eSuperTypes="#//OverlappingChange"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="oclExpression" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Violation" abstract="true" eSuperTypes="#//Conflict">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="severity" lowerBound="1"
+        eType="#//ViolationSeverity" defaultValueLiteral="ERROR"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeleteUse" eSuperTypes="#//OverlappingChange"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeleteMove" eSuperTypes="#//DeleteUse"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MoveMove" eSuperTypes="#//UpdateUpdate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramViolation" eSuperTypes="#//Violation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="violatedConstraint" lowerBound="1"
+        eType="#//Constraint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ViolationSeverity">
+    <eLiterals name="INFO" literal="INFO"/>
+    <eLiterals name="WARNING" value="1" literal="WARNING"/>
+    <eLiterals name="ERROR" value="2" literal="ERROR"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationContractDiagnostics" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ViolatedPrecondition" eSuperTypes="#//OperationContractDiagnostics">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditionViolations" lowerBound="1"
+        upperBound="-1" eType="#//ConditionViolation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MissingObject" eSuperTypes="#//OperationContractDiagnostics">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="missingObject" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="template" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.modelversioning.core.conditions/models/conditions.ecore#//Template"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DifferentBindingSize" eSuperTypes="#//OperationContractDiagnostics">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oldBinding" lowerBound="1"
+        eType="ecore:EClass ../../org.modelversioning.core.conditions/models/templateBindings.ecore#//TemplateBindingCollection"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newBinding" lowerBound="1"
+        eType="ecore:EClass ../../org.modelversioning.core.conditions/models/templateBindings.ecore#//TemplateBindingCollection"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="differenceKind" lowerBound="1"
+        eType="#//BindingSizeDifference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionViolation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="violatedCondition" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.modelversioning.core.conditions/models/conditions.ecore#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="violatingObject" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BindingSizeDifference">
+    <eLiterals name="DECREASED"/>
+    <eLiterals name="INCREASED" value="1"/>
+    <eLiterals name="BOTH" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MatchingNegativeApplicationCondition"
+      eSuperTypes="#//OperationContractDiagnostics">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="negativeApplicationCondition"
+        lowerBound="1" eType="ecore:EClass platform:/plugin/org.modelversioning.operations/models/operations.ecore#//NegativeApplicationCondition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nacBinding" lowerBound="1"
+        eType="ecore:EClass ../../org.modelversioning.core.conditions/models/templateBindings.ecore#//TemplateBindingCollection"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

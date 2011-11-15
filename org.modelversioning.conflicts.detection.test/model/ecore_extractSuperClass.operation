@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operations:OperationSpecification xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:conditions="http://modelversioning.org/core/conditions/metamodel/1.0" xmlns:diff="http://www.eclipse.org/emf/compare/diff/1.1"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:match="http://www.eclipse.org/emf/compare/match/1.1"
+    xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:operations="http://modelversioning.org/operations/metamodel/1.0" name="Extract Super Class"
+    description="" titleTemplate="" modelingLanguage="http://www.eclipse.org/emf/2002/Ecore"
+    modelFileExtension="ecore" diagramFileExtension="ecorediag" editorId="org.eclipse.emf.ecoretools.diagram.part.EcoreDiagramEditorID"
+    state="CONFIGURATION">
+  <workingModelRoot xsi:type="ecore:EPackage" name="initial" nsURI="http://initial/1.0"
+      nsPrefix="initial">
+    <eClassifiers xsi:type="ecore:EClass" name="Sub1" eSuperTypes="#//@workingModelRoot/Super"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Sub2" eSuperTypes="#//@workingModelRoot/Super"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Super">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="att"/>
+    </eClassifiers>
+  </workingModelRoot>
+  <workingDiagram xsi:type="notation:Diagram" type="EcoreTools" element="#//@workingModelRoot"
+      name="initial" measurementUnit="Pixel">
+    <children type="1001" element="#//@workingModelRoot/Sub1">
+      <children type="4001"/>
+      <children type="5001">
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <children type="5002">
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <styles xsi:type="notation:ShapeStyle" fontColor="4210752" fontName="Ubuntu"
+          fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="109" y="154"/>
+    </children>
+    <children type="1001" element="#//@workingModelRoot/Sub2">
+      <children type="4001"/>
+      <children type="5001">
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <children type="5002">
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <styles xsi:type="notation:ShapeStyle" fontColor="4210752" fontName="Ubuntu"
+          fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="235" y="153"/>
+    </children>
+    <children type="1001" element="#//@workingModelRoot/Super">
+      <children type="4001"/>
+      <children type="5001">
+        <children type="2001" element="#//@workingModelRoot/Super/att">
+          <layoutConstraint xsi:type="notation:Location"/>
+        </children>
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <children type="5002">
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <styles xsi:type="notation:ShapeStyle" fontColor="4210752" fontName="Ubuntu"
+          fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="164" y="80"/>
+    </children>
+    <styles xsi:type="notation:DiagramStyle"/>
+    <edges type="3003" source="#//@workingDiagram.0/@children.0" target="#//@workingDiagram.0/@children.2">
+      <styles xsi:type="notation:ConnectorStyle" routing="Rectilinear" lineColor="4210752"/>
+      <styles xsi:type="notation:FontStyle" fontName="Ubuntu"/>
+      <element xsi:nil="true"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" points="[5, -3, -45, 36]$[51, -30, 1, 9]"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.49019607843137253,0.09523809523809523)"/>
+      <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.4411764705882353,0.8163265306122449)"/>
+    </edges>
+    <edges type="3003" source="#//@workingDiagram.0/@children.1" target="#//@workingDiagram.0/@children.2">
+      <styles xsi:type="notation:ConnectorStyle" routing="Rectilinear" lineColor="4210752"/>
+      <styles xsi:type="notation:FontStyle" fontName="Ubuntu"/>
+      <element xsi:nil="true"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" points="[-12, -8, 45, 33]$[-55, -34, 2, 7]"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.38235294117647056,0.21428571428571427)"/>
+      <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.5294117647058824,0.8571428571428571)"/>
+    </edges>
+  </workingDiagram>
+  <originModelRoot xsi:type="ecore:EPackage" name="initial" nsURI="http://initial/1.0"
+      nsPrefix="initial">
+    <eClassifiers xsi:type="ecore:EClass" name="Sub1">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="att"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sub2">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="att"/>
+    </eClassifiers>
+  </originModelRoot>
+  <originDiagram xsi:type="notation:Diagram" type="EcoreTools" element="#//@originModelRoot"
+      name="initial" measurementUnit="Pixel">
+    <children type="1001" element="#//@originModelRoot/Sub1">
+      <children type="4001"/>
+      <children type="5001">
+        <children type="2001" element="#//@originModelRoot/Sub1/att">
+          <layoutConstraint xsi:type="notation:Location"/>
+        </children>
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <children type="5002">
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <styles xsi:type="notation:ShapeStyle" fontColor="4210752" fontName="Ubuntu"
+          fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="109" y="154"/>
+    </children>
+    <children type="1001" element="#//@originModelRoot/Sub2">
+      <children type="4001"/>
+      <children type="5001">
+        <children type="2001" element="#//@originModelRoot/Sub2/att">
+          <layoutConstraint xsi:type="notation:Location"/>
+        </children>
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <children type="5002">
+        <styles xsi:type="notation:DrawerStyle"/>
+        <styles xsi:type="notation:SortingStyle"/>
+        <styles xsi:type="notation:FilteringStyle"/>
+      </children>
+      <styles xsi:type="notation:ShapeStyle" fontColor="4210752" fontName="Ubuntu"
+          fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+      <layoutConstraint xsi:type="notation:Bounds" x="235" y="153"/>
+    </children>
+    <styles xsi:type="notation:DiagramStyle"/>
+  </originDiagram>
+  <differenceModel date="2011-05-30T15:59:38.899+0200">
+    <diff leftRoots="#//@originModelRoot" rightRoots="#//@workingModelRoot">
+      <ownedElements xsi:type="diff:DiffGroup">
+        <subDiffElements xsi:type="diff:DiffGroup" rightParent="#/">
+          <subDiffElements xsi:type="diff:DiffGroup" rightParent="#//@originModelRoot">
+            <subDiffElements xsi:type="diff:DiffGroup" rightParent="#//@originModelRoot/Sub1">
+              <subDiffElements xsi:type="diff:ReferenceChangeLeftTarget" reference="http://www.eclipse.org/emf/2002/Ecore#//EClass/eSuperTypes"
+                  rightElement="#//@originModelRoot/Sub1" leftElement="#//@workingModelRoot/Sub1"
+                  leftTarget="#//@workingModelRoot/Super"/>
+              <subDiffElements xsi:type="diff:DiffGroup" rightParent="#//@originModelRoot/Sub1/att">
+                <subDiffElements xsi:type="diff:MoveModelElement" rightElement="#//@originModelRoot/Sub1/att"
+                    leftElement="#//@workingModelRoot/Super/att" leftTarget="#//@workingModelRoot/Sub1"/>
+              </subDiffElements>
+            </subDiffElements>
+            <subDiffElements xsi:type="diff:DiffGroup" rightParent="#//@originModelRoot/Sub2">
+              <subDiffElements xsi:type="diff:ReferenceChangeLeftTarget" reference="http://www.eclipse.org/emf/2002/Ecore#//EClass/eSuperTypes"
+                  rightElement="#//@originModelRoot/Sub2" leftElement="#//@workingModelRoot/Sub2"
+                  leftTarget="#//@workingModelRoot/Super"/>
+              <subDiffElements xsi:type="diff:ModelElementChangeRightTarget" leftParent="#//@workingModelRoot/Sub2"
+                  rightElement="#//@originModelRoot/Sub2/att"/>
+            </subDiffElements>
+            <subDiffElements xsi:type="diff:ModelElementChangeLeftTarget" rightParent="#//@originModelRoot"
+                leftElement="#//@workingModelRoot/Super"/>
+          </subDiffElements>
+        </subDiffElements>
+      </ownedElements>
+    </diff>
+    <match leftRoots="#//@originModelRoot" rightRoots="#//@workingModelRoot">
+      <matchedElements xsi:type="match:Match2Elements" similarity="1.0" leftElement="#//@workingModelRoot"
+          rightElement="#//@originModelRoot">
+        <subMatchElements xsi:type="match:Match2Elements" similarity="1.0" leftElement="#//@workingModelRoot/Sub1"
+            rightElement="#//@originModelRoot/Sub1"/>
+        <subMatchElements xsi:type="match:Match2Elements" similarity="1.0" leftElement="#//@workingModelRoot/Sub2"
+            rightElement="#//@originModelRoot/Sub2"/>
+        <subMatchElements xsi:type="match:Match2Elements" similarity="1.0" leftElement="#//@workingModelRoot/Super/att"
+            rightElement="#//@originModelRoot/Sub1/att"/>
+      </matchedElements>
+      <unmatchedElements element="#//@workingModelRoot/Sub1/@eGenericSuperTypes.0"/>
+      <unmatchedElements element="#//@workingModelRoot/Sub2/@eGenericSuperTypes.0"/>
+      <unmatchedElements element="#//@workingModelRoot/Super"/>
+      <unmatchedElements element="#//@originModelRoot/Sub2/att" side="Right"/>
+    </match>
+  </differenceModel>
+  <iterations template="#//@preconditions/@rootTemplate/@subTemplates.1"/>
+  <iterations template="#//@preconditions/@rootTemplate/@subTemplates.0/@subTemplates.0"/>
+  <iterations template="#//@preconditions/@rootTemplate/@subTemplates.1/@subTemplates.0"/>
+  <userInputs name="Name of Super Class" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+      template="#//@postconditions/@rootTemplate/@subTemplates.2"/>
+  <preconditions createdAt="2011-05-30T15:58:59.836+0200">
+    <rootTemplate name="EPackage_0" title="initial : EPackage" representative="#//@originModelRoot">
+      <subTemplates name="EClass_0" title="Sub1 : EClass" representative="#//@originModelRoot/Sub1"
+          parentsFeature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EPackage/eClassifiers">
+        <subTemplates name="EAttribute_0" title="att : EAttribute" representative="#//@originModelRoot/Sub1/att"
+            parentsFeature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eStructuralFeatures">
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+              expression=" = 'att'"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/ordered"
+              expression=" = true"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/unique"
+              expression=" = true"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/lowerBound"
+              expression=" = 0"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/upperBound"
+              expression=" = 1"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/many"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/required"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/changeable"
+              expression=" = true"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/volatile"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/transient"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/defaultValueLiteral"
+              expression=" = null"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/defaultValue"
+              expression=" = null"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/unsettable"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/derived"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/eType"
+              expression=" = null"/>
+          <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/eContainingClass"
+              expression=" = #{EClass_0}"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EAttribute/eAttributeType"
+              expression=" = null"/>
+        </subTemplates>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+            expression=" = 'Sub1'"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClassName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClass"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/defaultValue"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceTypeName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/abstract"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/interface"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClassifier/ePackage"
+            expression=" = #{EPackage_0}"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eSuperTypes"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllAttributes"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAttributes"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllContainments"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllOperations"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllStructuralFeatures"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllSuperTypes"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eIDAttribute"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllGenericSuperTypes"
+            expression="->isEmpty()"/>
+      </subTemplates>
+      <subTemplates name="EClass_1" title="Sub2 : EClass" representative="#//@originModelRoot/Sub2"
+          parentsFeature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EPackage/eClassifiers">
+        <subTemplates name="EAttribute_1" title="att : EAttribute" representative="#//@originModelRoot/Sub2/att"
+            parentsFeature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eStructuralFeatures">
+          <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+              expression=" = #{EAttribute_0}.name"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/ordered"
+              expression=" = true"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/unique"
+              expression=" = true"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/lowerBound"
+              expression=" = 0"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/upperBound"
+              expression=" = 1"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/many"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/required"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/changeable"
+              expression=" = true"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/volatile"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/transient"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/defaultValueLiteral"
+              expression=" = null"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/defaultValue"
+              expression=" = null"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/unsettable"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/derived"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/eType"
+              expression=" = null"/>
+          <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/eContainingClass"
+              expression=" = #{EClass_1}"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EAttribute/eAttributeType"
+              expression=" = null"/>
+        </subTemplates>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+            expression=" = 'Sub2'"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClassName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClass"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/defaultValue"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceTypeName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/abstract"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/interface"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClassifier/ePackage"
+            expression=" = #{EPackage_0}"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eSuperTypes"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllAttributes"
+            expression="->includes(#{EAttribute_1})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAttributes"
+            expression="->includes(#{EAttribute_1})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllContainments"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllOperations"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllStructuralFeatures"
+            expression="->includes(#{EAttribute_1})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllSuperTypes"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eIDAttribute"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllGenericSuperTypes"
+            expression="->isEmpty()"/>
+      </subTemplates>
+      <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+          expression=" = 'initial'"/>
+      <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EPackage/nsURI"
+          expression=" = 'http://initial/1.0'"/>
+      <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EPackage/nsPrefix"
+          expression=" = 'initial'"/>
+      <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EPackage/eSuperPackage"
+          expression=" = null"/>
+    </rootTemplate>
+  </preconditions>
+  <postconditions createdAt="2011-05-30T15:59:38.906+0200" modelName="platform:/resource/org.modelversioning.conflicts.detection.test/model/revision__3OJ4IrEEeCrU5oKPtR0zg.ecore">
+    <rootTemplate name="EPackage_0" title="initial : EPackage" representative="#//@workingModelRoot">
+      <subTemplates name="EClass_0" title="Sub1 : EClass" representative="#//@workingModelRoot/Sub1"
+          parentsFeature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EPackage/eClassifiers">
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+            expression=" = 'Sub1'"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClassName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClass"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/defaultValue"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceTypeName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/abstract"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/interface"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClassifier/ePackage"
+            expression=" = #{EPackage_0}"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eSuperTypes"
+            expression="->includes(#{EClass_2})"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllAttributes"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAttributes"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllContainments"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllOperations"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllStructuralFeatures"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllSuperTypes"
+            expression="->includes(#{EClass_2})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eIDAttribute"
+            expression=" = null"/>
+      </subTemplates>
+      <subTemplates name="EClass_1" title="Sub2 : EClass" representative="#//@workingModelRoot/Sub2"
+          parentsFeature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EPackage/eClassifiers">
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+            expression=" = 'Sub2'"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClassName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClass"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/defaultValue"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceTypeName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/abstract"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/interface"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClassifier/ePackage"
+            expression=" = #{EPackage_0}"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eSuperTypes"
+            expression="->includes(#{EClass_2})"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllAttributes"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAttributes"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllContainments"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllOperations"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllStructuralFeatures"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllSuperTypes"
+            expression="->includes(#{EClass_2})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eIDAttribute"
+            expression=" = null"/>
+      </subTemplates>
+      <subTemplates name="EClass_2" title="Super : EClass" representative="#//@workingModelRoot/Super"
+          parentsFeature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EPackage/eClassifiers">
+        <subTemplates name="EAttribute_0" title="att : EAttribute" representative="#//@workingModelRoot/Super/att"
+            parentsFeature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eStructuralFeatures">
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+              expression=" = 'att'"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/ordered"
+              expression=" = true"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/unique"
+              expression=" = true"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/lowerBound"
+              expression=" = 0"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/upperBound"
+              expression=" = 1"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/many"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/required"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/changeable"
+              expression=" = true"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/volatile"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/transient"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/defaultValueLiteral"
+              expression=" = null"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/defaultValue"
+              expression=" = null"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/unsettable"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/derived"
+              expression=" = false"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/eType"
+              expression=" = null"/>
+          <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature/eContainingClass"
+              expression=" = #{EClass_2}"/>
+          <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EAttribute/eAttributeType"
+              expression=" = null"/>
+        </subTemplates>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+            expression=" = 'Super'"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClassName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceClass"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/defaultValue"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClassifier/instanceTypeName"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/abstract"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EClass/interface"
+            expression=" = false"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClassifier/ePackage"
+            expression=" = #{EPackage_0}"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eSuperTypes"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllAttributes"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eReferences"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAttributes"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllContainments"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllOperations"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllStructuralFeatures"
+            expression="->includes(#{EAttribute_0})"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllSuperTypes"
+            expression="->isEmpty()"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eIDAttribute"
+            expression=" = null"/>
+        <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EClass/eAllGenericSuperTypes"
+            expression="->isEmpty()"/>
+      </subTemplates>
+      <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+          expression=" = 'initial'"/>
+      <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EPackage/nsURI"
+          expression=" = 'http://initial/1.0'"/>
+      <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EAttribute http://www.eclipse.org/emf/2002/Ecore#//EPackage/nsPrefix"
+          expression=" = 'initial'"/>
+      <specifications xsi:type="conditions:FeatureCondition" active="false" feature="ecore:EReference http://www.eclipse.org/emf/2002/Ecore#//EPackage/eSuperPackage"
+          expression=" = null"/>
+    </rootTemplate>
+  </postconditions>
+</operations:OperationSpecification>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2011 modelversioning.org&#xA;All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html"
+    modelDirectory="/org.modelversioning.conflicts/src" modelPluginID="org.modelversioning.conflicts"
+    modelName="Conflict" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" colorProviders="true" fontProviders="true" usedGenPackages="platform:/plugin/org.modelversioning.core.conditions/models/conditions.genmodel#//conditions platform:/plugin/org.eclipse.emf.compare.diff/model/diff.genmodel#//diff platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.eclipse.emf.compare.match/model/match.genmodel#//match platform:/plugin/org.modelversioning.operations/models/operations.genmodel#//operations platform:/plugin/org.modelversioning.core.conditions/models/templateBindings.genmodel#//templatebindings">
+  <foreignModel>conflict.ecore</foreignModel>
+  <genPackages prefix="Conflict" basePackage="org.modelversioning.conflictreport"
+      disposableProviderFactory="true" ecorePackage="conflict.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="conflict.ecore#//ViolationSeverity">
+      <genEnumLiterals ecoreEnumLiteral="conflict.ecore#//ViolationSeverity/INFO"/>
+      <genEnumLiterals ecoreEnumLiteral="conflict.ecore#//ViolationSeverity/WARNING"/>
+      <genEnumLiterals ecoreEnumLiteral="conflict.ecore#//ViolationSeverity/ERROR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="conflict.ecore#//BindingSizeDifference">
+      <genEnumLiterals ecoreEnumLiteral="conflict.ecore#//BindingSizeDifference/DECREASED"/>
+      <genEnumLiterals ecoreEnumLiteral="conflict.ecore#//BindingSizeDifference/INCREASED"/>
+      <genEnumLiterals ecoreEnumLiteral="conflict.ecore#//BindingSizeDifference/BOTH"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="conflict.ecore#//Conflict">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conflict.ecore#//Conflict/leftChange"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conflict.ecore#//Conflict/rightChange"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="conflict.ecore#//OverlappingChange"/>
+    <genClasses ecoreClass="conflict.ecore#//MetamodelViolation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conflict.ecore#//MetamodelViolation/violatedConstraint"/>
+    </genClasses>
+    <genClasses ecoreClass="conflict.ecore#//OperationContractViolation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference conflict.ecore#//OperationContractViolation/diagnostics"/>
+    </genClasses>
+    <genClasses ecoreClass="conflict.ecore#//UpdateUpdate"/>
+    <genClasses ecoreClass="conflict.ecore#//DeleteUpdate"/>
+    <genClasses ecoreClass="conflict.ecore#//AddAdd"/>
+    <genClasses ecoreClass="conflict.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute conflict.ecore#//Constraint/oclExpression"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="conflict.ecore#//Violation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute conflict.ecore#//Violation/severity"/>
+    </genClasses>
+    <genClasses ecoreClass="conflict.ecore#//DeleteUse"/>
+    <genClasses ecoreClass="conflict.ecore#//DeleteMove"/>
+    <genClasses ecoreClass="conflict.ecore#//MoveMove"/>
+    <genClasses ecoreClass="conflict.ecore#//DiagramViolation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conflict.ecore#//DiagramViolation/violatedConstraint"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="conflict.ecore#//OperationContractDiagnostics"/>
+    <genClasses ecoreClass="conflict.ecore#//ViolatedPrecondition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference conflict.ecore#//ViolatedPrecondition/conditionViolations"/>
+    </genClasses>
+    <genClasses ecoreClass="conflict.ecore#//MissingObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conflict.ecore#//MissingObject/missingObject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conflict.ecore#//MissingObject/template"/>
+    </genClasses>
+    <genClasses ecoreClass="conflict.ecore#//DifferentBindingSize">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference conflict.ecore#//DifferentBindingSize/oldBinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference conflict.ecore#//DifferentBindingSize/newBinding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute conflict.ecore#//DifferentBindingSize/differenceKind"/>
+    </genClasses>
+    <genClasses ecoreClass="conflict.ecore#//ConditionViolation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conflict.ecore#//ConditionViolation/violatedCondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conflict.ecore#//ConditionViolation/violatingObject"/>
+    </genClasses>
+    <genClasses ecoreClass="conflict.ecore#//MatchingNegativeApplicationCondition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conflict.ecore#//MatchingNegativeApplicationCondition/negativeApplicationCondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference conflict.ecore#//MatchingNegativeApplicationCondition/nacBinding"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

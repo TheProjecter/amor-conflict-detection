@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<opt:Container xmi:id="_container" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opt="http://www.modelversioning.org/conflicts/opposite-property-test" xsi:schemaLocation="http://www.modelversioning.org/conflicts/opposite-property-test conflict-detector_test2_metamodel.ecore">
+  <allParents name="1" xmi:id="_parent_1" children="_child_1 _child_2"/>
+  <allParents xmi:id="_parent_2" children="_child_3"/>
+  <allChildren xmi:id="_child_1" parent="_parent_1"/>
+  <allChildren xmi:id="_child_2" parent="_parent_1"/>
+  <allChildren xmi:id="_child_3" parent="_parent_2"/>
+</opt:Container>

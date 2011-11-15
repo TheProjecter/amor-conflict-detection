@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="org.modelversioning.conflicts.detection.ui.contribution1"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               id="org.modelversioning.conflicts.detection.ui.menu1"
+               label="Conflict Detection"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="org.modelversioning.conflicts.detection.ui.popup.actions.DetectConflictsAction"
+               enablesFor="multiple"
+               id="org.modelversioning.conflicts.detection.ui.newAction"
+               label="Detect Conflicts"
+               menubarPath="org.modelversioning.conflicts.detection.ui.menu1/group1">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

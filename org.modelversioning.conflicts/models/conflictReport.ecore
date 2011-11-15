@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="conflictreport"
+    nsURI="http://modelversioning.org/conflictreport/1.0" nsPrefix="conflictreport">
+  <eClassifiers xsi:type="ecore:EClass" name="ConflictReport">
+    <eOperations name="hasConflictingChange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diffElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    </eOperations>
+    <eOperations name="getConflictingChanges" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement">
+      <eParameters name="diffElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    </eOperations>
+    <eOperations name="getConflicts" upperBound="-1" eType="ecore:EClass conflict.ecore#//Conflict">
+      <eParameters name="diffElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    </eOperations>
+    <eOperations name="hasEquivalentChange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="diffElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    </eOperations>
+    <eOperations name="getEquivalentChanges" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement">
+      <eParameters name="diffElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    </eOperations>
+    <eOperations name="getEquivalentSubChanges" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    <eOperations name="getEquivalentPreferredChanges" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    <eOperations name="isDependentDiagramChange" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eParameters name="diagramChange" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    </eOperations>
+    <eOperations name="getDependentDiagramChanges" upperBound="-1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement">
+      <eParameters name="modelChange" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    </eOperations>
+    <eOperations name="getDependentModelChange" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement">
+      <eParameters name="diagramChange" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    </eOperations>
+    <eOperations name="hasDependentDiagramChange" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean">
+      <eParameters name="modelChange" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conflicts" upperBound="-1"
+        eType="ecore:EClass conflict.ecore#//Conflict" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="equivalentChanges" upperBound="-1"
+        eType="#//EquivalentChange" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependencies" upperBound="-1"
+        eType="#//ConflictDependency"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftVersion" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//ComparisonResourceSnapshot"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightVersion" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//ComparisonResourceSnapshot"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftDiagrams" upperBound="-1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//ComparisonResourceSnapshot"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightDiagrams" upperBound="-1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//ComparisonResourceSnapshot"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftUser" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rightUser" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagramDependencies" ordered="false"
+        upperBound="-1" eType="#//DependentDiagramChange"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EquivalentChange">
+    <eOperations name="getPreferredChange" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    <eOperations name="getSubChange" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftChange" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightChange" eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="preferSide" lowerBound="1"
+        eType="ecore:EEnum platform:/plugin/org.eclipse.emf.compare.match/model/match.ecore#//Side"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConflictDependency">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependentConflict" lowerBound="2"
+        upperBound="2" eType="ecore:EClass conflict.ecore#//Conflict"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DependentDiagramChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelChange" lowerBound="1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diagramChanges" upperBound="-1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.compare.diff/model/diff.ecore#//DiffElement"/>
+  </eClassifiers>
+</ecore:EPackage>

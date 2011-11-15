@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_jQ3U4AXOEd-gWeHz6bfp_w"
+    name="conflicts" nsURI="http://modelversioning.org/core/conflicts/metamodel/1.0"
+    nsPrefix="conflicts">
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_jQ-CkAXOEd-gWeHz6bfp_w" name="Conflict">
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_jRY5UAXOEd-gWeHz6bfp_w"
+        name="violatedConstraints" upperBound="-1" eType="#_jRZgYwXOEd-gWeHz6bfp_w"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_jRY5UQXOEd-gWeHz6bfp_w"
+        name="conflictingOperations" upperBound="2" eType="#_jRZgZQXOEd-gWeHz6bfp_w"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_jRZgYAXOEd-gWeHz6bfp_w"
+        name="resolutions" upperBound="-1" eType="#_jRZgYgXOEd-gWeHz6bfp_w" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_jRZgYQXOEd-gWeHz6bfp_w"
+        name="bindings" upperBound="-1" eType="#_jRaHcQXOEd-gWeHz6bfp_w" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_jRZgYgXOEd-gWeHz6bfp_w" name="Resolution"/>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_jRZgYwXOEd-gWeHz6bfp_w" name="Constraint"
+      abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_jRZgZAXOEd-gWeHz6bfp_w"
+        name="bindings" upperBound="-1" eType="#_jRaHcQXOEd-gWeHz6bfp_w" eOpposite="#_jRaHdAXOEd-gWeHz6bfp_w"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_jRZgZQXOEd-gWeHz6bfp_w" name="ConflictingOperation"
+      abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_jRaHcAXOEd-gWeHz6bfp_w"
+        name="bindings" upperBound="-1" eType="#_jRaHcQXOEd-gWeHz6bfp_w" eOpposite="#_jRaugAXOEd-gWeHz6bfp_w"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_jRaHcQXOEd-gWeHz6bfp_w" name="Binding">
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_jRaHcgXOEd-gWeHz6bfp_w"
+        name="concreteBinding" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_jRaHdAXOEd-gWeHz6bfp_w"
+        name="constraintBindings" upperBound="-1" eType="#_jRZgYwXOEd-gWeHz6bfp_w"
+        eOpposite="#_jRZgZAXOEd-gWeHz6bfp_w"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_jRaugAXOEd-gWeHz6bfp_w"
+        name="operationBindings" upperBound="2" eType="#_jRZgZQXOEd-gWeHz6bfp_w" eOpposite="#_jRaHcAXOEd-gWeHz6bfp_w"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_w7xzkAa8Ed-ZYPdPuYetQQ"
+        name="missingBinding" eType="#_w7yapAa8Ed-ZYPdPuYetQQ" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_jRauggXOEd-gWeHz6bfp_w" name="MetaModelConstraint"
+      eSuperTypes="#_jRZgYwXOEd-gWeHz6bfp_w"/>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_jRauhAXOEd-gWeHz6bfp_w" name="OperationConstraint"
+      eSuperTypes="#_jRZgYwXOEd-gWeHz6bfp_w"/>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_jRauhgXOEd-gWeHz6bfp_w" name="ConflictingAtomicOperation"
+      eSuperTypes="#_jRZgZQXOEd-gWeHz6bfp_w"/>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_jRauiAXOEd-gWeHz6bfp_w" name="ConflictingCompositeOperation"
+      eSuperTypes="#_jRZgZQXOEd-gWeHz6bfp_w"/>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_w7yapAa8Ed-ZYPdPuYetQQ" name="MissingBinding">
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_w7zBsQa8Ed-ZYPdPuYetQQ"
+        name="type" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_Pwo74gXhEd-uyrU_1s2ubA"
+        name="elementName" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

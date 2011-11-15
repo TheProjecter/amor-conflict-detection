@@ -1,0 +1,19 @@
+Explicit DeleteUpdate [OK]
+Left: Company:partOf upper from 1 to 10
+Right: Remove Company:partOf
+
+Implicit Delete [OK]
+Left: Delete CarManufactor (including produced)
+Right: Update produced -> produces
+
+Implicit Update/Implicit Delete [OK]
+Right: Add attribute initials to class Person
+Left: Remove class Person via delete of package persons
+
+Move to Deleted Object [OK]
+LEFT: Remove class Person via delete of package persons
+Right: Move Chain to package persons
+
+Changes that should not be reported as conflict:
+LEFT: Remove class Person via delete of package persons
+Right: Remove firstname of person

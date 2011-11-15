@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="Conflict Report Editor"
+            extensions="conflictreport"
+            icon="icons/conflict-report-editor.gif"
+            class="org.modelversioning.conflicts.ui.editors.ConflictReportEditor"
+            id="org.modelversioning.conflicts.ui.editors.ConflictReportEditor">
+      </editor>
+   </extension>
+
+</plugin>
