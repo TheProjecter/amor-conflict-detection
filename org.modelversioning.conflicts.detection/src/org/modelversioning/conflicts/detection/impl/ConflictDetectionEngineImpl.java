@@ -138,11 +138,14 @@ public class ConflictDetectionEngineImpl implements IConflictDetectionEngine {
 		try {
 			// perform overlapping change detection
 			for (IOperationConflictDetector detector : operationConflictDetectors) {
-				monitor.subTask(detector.getName());
-				detector.initialize();
-				detector.detectOperationConflicts(threeWayDiff, conflicts,
-						equivalentChanges, new SubProgressMonitor(monitor, 1));
-				monitor.worked(1);
+				if (handlesNamespace(detector, threeWayDiff)) {
+					monitor.subTask(detector.getName());
+					detector.initialize();
+					detector.detectOperationConflicts(threeWayDiff, conflicts,
+							equivalentChanges, new SubProgressMonitor(monitor,
+									1));
+					monitor.worked(1);
+				}
 			}
 
 			// perform general violation detection
@@ -162,6 +165,20 @@ public class ConflictDetectionEngineImpl implements IConflictDetectionEngine {
 			monitor.done();
 		}
 
+	}
+
+	private boolean handlesNamespace(IOperationConflictDetector detector,
+			IThreeWayDiffProvider threeWayDiff) {
+		if (detector.getTargetModelNsURI() == "*") {
+			return true;
+		} else {
+			String nsURI = threeWayDiff.getLeftModel().get(0).eClass()
+					.getEPackage().getNsURI();
+			if (nsURI.equals(detector.getTargetModelNsURI())) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	@Override
