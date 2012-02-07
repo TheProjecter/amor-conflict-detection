@@ -1,10 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Atomic Conflicts Detection
-Bundle-SymbolicName: org.modelversioning.conflicts.detection.signifier
+Bundle-SymbolicName: org.modelversioning.conflicts.detection.signifier;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: modelversioning.org
 Require-Bundle: org.eclipse.core.runtime,
- org.modelversioning.conflicts.detection;bundle-version="1.0.0"
+ org.modelversioning.conflicts.detection;bundle-version="1.0.0",
+ org.eclipse.ui;bundle-version="3.6.2",
+ org.eclipse.epsilon.ecl.engine;bundle-version="0.9.0",
+ org.eclipse.epsilon.eol.engine;bundle-version="0.9.0",
+ org.eclipse.epsilon.erl.engine;bundle-version="0.9.0",
+ org.eclipse.epsilon.emc.emf;bundle-version="0.9.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
+Bundle-Activator: org.modelversioning.conflicts.detection.signifier.SignifierDetectionPlugin

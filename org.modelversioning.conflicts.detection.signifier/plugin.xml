@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.modelversioning.conflicts.detection.operationconflictdetector">
+      <detector
+            class="org.modelversioning.conflicts.detection.signifier.ConcurrentSignifierChangeDetection">
+      </detector>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.modelversioning.conflicts.detection.signifier.preferences.SignifierPreferencePage"
+            id="org.modelversioning.conflicts.detection.signifier.preferences.SignifierPreferencePage"
+            name="Signifier Preferences">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.modelversioning.conflicts.detection.signifier.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>
