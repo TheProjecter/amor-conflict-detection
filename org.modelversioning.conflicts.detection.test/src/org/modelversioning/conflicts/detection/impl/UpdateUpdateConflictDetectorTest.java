@@ -19,6 +19,7 @@ import org.eclipse.emf.compare.diff.metamodel.ReferenceChange;
 import org.modelversioning.conflictreport.EquivalentChange;
 import org.modelversioning.conflictreport.conflict.Conflict;
 import org.modelversioning.conflictreport.conflict.UpdateUpdate;
+import org.modelversioning.conflicts.detection.atomic.UpdateUpdateConflictDetector;
 
 /**
  * Test case for {@link UpdateUpdateConflictDetector}.
@@ -34,7 +35,7 @@ public class UpdateUpdateConflictDetectorTest extends ConflictDetectorTestCase {
 		UpdateUpdateConflictDetector detector = new UpdateUpdateConflictDetector();
 		EList<Conflict> conflictList = getEmptyConflictList();
 		EList<EquivalentChange> equivalentChangesList = getEmptyEquivalentChangesList();
-		detector.detectOverlappingChanges(threeWayDiffProvider_test1, conflictList,
+		detector.detectOperationConflicts(threeWayDiffProvider_test1, conflictList,
 				equivalentChangesList, getProgressMonitor());
 		assertEquals(1, conflictList.size());
 		Conflict conflict = conflictList.get(0);
@@ -56,7 +57,7 @@ public class UpdateUpdateConflictDetectorTest extends ConflictDetectorTestCase {
 		detector = new UpdateUpdateConflictDetector();
 		conflictList = getEmptyConflictList();
 		equivalentChangesList = getEmptyEquivalentChangesList();
-		detector.detectOverlappingChanges(threeWayDiffProvider_test2, conflictList,
+		detector.detectOperationConflicts(threeWayDiffProvider_test2, conflictList,
 				equivalentChangesList, getProgressMonitor());
 		assertEquals(1, conflictList.size());
 		conflict = conflictList.get(0);

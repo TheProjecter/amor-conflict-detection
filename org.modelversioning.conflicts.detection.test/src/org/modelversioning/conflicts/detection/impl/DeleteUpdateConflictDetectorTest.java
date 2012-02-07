@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.modelversioning.conflictreport.EquivalentChange;
 import org.modelversioning.conflictreport.conflict.Conflict;
 import org.modelversioning.conflictreport.conflict.DeleteUpdate;
+import org.modelversioning.conflicts.detection.atomic.DeleteUpdateConflictDetector;
 
 /**
  * Test case for {@link DeleteUpdateConflictDetector}.
@@ -32,7 +33,7 @@ public class DeleteUpdateConflictDetectorTest extends ConflictDetectorTestCase {
 		DeleteUpdateConflictDetector detector = new DeleteUpdateConflictDetector();
 		EList<Conflict> conflictList = getEmptyConflictList();
 		EList<EquivalentChange> equivalentChangesList = getEmptyEquivalentChangesList();
-		detector.detectOverlappingChanges(threeWayDiffProvider_test3, conflictList,
+		detector.detectOperationConflicts(threeWayDiffProvider_test3, conflictList,
 				equivalentChangesList, getProgressMonitor());
 		// TODO more sophisticated asserts
 		for (Conflict conflict : conflictList) {
@@ -48,7 +49,7 @@ public class DeleteUpdateConflictDetectorTest extends ConflictDetectorTestCase {
 		detector = new DeleteUpdateConflictDetector();
 		conflictList = getEmptyConflictList();
 		equivalentChangesList = getEmptyEquivalentChangesList();
-		detector.detectOverlappingChanges(threeWayDiffProvider_test4, conflictList,
+		detector.detectOperationConflicts(threeWayDiffProvider_test4, conflictList,
 				equivalentChangesList, getProgressMonitor());
 		// TODO more sophisticated asserts
 		for (Conflict conflict : conflictList) {

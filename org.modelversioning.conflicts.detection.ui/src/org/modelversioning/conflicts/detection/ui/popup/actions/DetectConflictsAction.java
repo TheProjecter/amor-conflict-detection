@@ -204,7 +204,6 @@ public class DetectConflictsAction implements IObjectActionDelegate {
 		// Detect Conflicts
 		monitor.subTask("Detecting conflicts");
 		ConflictDetectionEngineImpl engine = new ConflictDetectionEngineImpl();
-		engine.setOperationContractViolationAware(true);
 		ConflictReport conflictReport = engine.detectConflicts(threeWayDiff,
 				new SubProgressMonitor(monitor, 1));
 		monitor.worked(1);

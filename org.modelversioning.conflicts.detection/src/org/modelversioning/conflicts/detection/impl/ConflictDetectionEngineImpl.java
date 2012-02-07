@@ -15,7 +15,10 @@ package org.modelversioning.conflicts.detection.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.compare.match.metamodel.Side;
@@ -24,46 +27,34 @@ import org.modelversioning.conflictreport.ConflictReport;
 import org.modelversioning.conflictreport.ConflictReportFactory;
 import org.modelversioning.conflictreport.EquivalentChange;
 import org.modelversioning.conflictreport.conflict.Conflict;
-import org.modelversioning.conflictreport.conflict.OperationContractViolation;
 import org.modelversioning.conflicts.detection.IThreeWayDiffProvider;
 import org.modelversioning.conflicts.detection.engine.IConflictDetectionEngine;
-import org.modelversioning.conflicts.detection.engine.IOverlappingChangeDetector;
+import org.modelversioning.conflicts.detection.engine.IOperationConflictDetector;
 import org.modelversioning.conflicts.detection.engine.IViolationDetector;
 import org.modelversioning.merge.IMerger;
 import org.modelversioning.merge.impl.MergerImpl;
 
 /**
- * A basic implementation of the {@link IConflictDetectionEngine}.
- * 
- * <p>
- * By default, this detector uses the {@link UpdateUpdateConflictDetector}, the
- * {@link DeleteUpdateConflictDetector}, and {@link DeleteUseConflictDetector}.
- * </p>
+ * A default implementation of the {@link IConflictDetectionEngine}, which uses
+ * the registered conflict detectors via the extension points.
  * 
  * @author <a href="mailto:langer@big.tuwien.ac.at">Philip Langer</a>
  * 
  */
 public class ConflictDetectionEngineImpl implements IConflictDetectionEngine {
 
+	private static final String IOPERATIONCONFLICTDETECTOR_ID = "org.modelversioning.conflicts.detection.operationconflictdetector";
+
 	/**
-	 * The list of {@link IOverlappingChangeDetector
+	 * The list of {@link IOperationConflictDetector
 	 * IOverlappingChangeDetectors}
 	 */
-	private List<IOverlappingChangeDetector> overlappingChangeDetectors = new ArrayList<IOverlappingChangeDetector>();
+	private List<IOperationConflictDetector> operationConflictDetectors = new ArrayList<IOperationConflictDetector>();
 
 	/**
 	 * The list of {@link IViolationDetector IViolationDetectors}
 	 */
 	private List<IViolationDetector> violationDetectors = new ArrayList<IViolationDetector>();
-
-	/**
-	 * Indicates whether this engine searches also for
-	 * {@link OperationContractViolation OperationContractViolations}.
-	 */
-	private boolean operationContractViolationAware = true;
-
-	/** Detector for detecting operation contract violations. */
-	private OperationContractViolationDetector operationContractViolationDetector = new OperationContractViolationDetector();
 
 	/**
 	 * The merger used for creating a merged version to apply
@@ -72,16 +63,28 @@ public class ConflictDetectionEngineImpl implements IConflictDetectionEngine {
 	private IMerger merger = new MergerImpl();
 
 	/**
-	 * Default constructor creating a detector. In this default settings this
-	 * detector uses the {@link UpdateUpdateConflictDetector}, the
-	 * {@link DeleteUpdateConflictDetector}, and the
-	 * {@link DeleteUseConflictDetector}.
+	 * Default constructor creating a detector. Loads the conflict detections
+	 * from extension points.
 	 */
 	public ConflictDetectionEngineImpl() {
-		overlappingChangeDetectors.add(new UpdateUpdateConflictDetector());
-		overlappingChangeDetectors.add(new DeleteUpdateConflictDetector());
-		overlappingChangeDetectors.add(new DeleteUseConflictDetector());
-		overlappingChangeDetectors.add(new MoveMoveConflictDetector());
+		loadConflictDetectorsFromExtensionPoint();
+	}
+
+	private void loadConflictDetectorsFromExtensionPoint() {
+		IConfigurationElement[] config = Platform.getExtensionRegistry()
+				.getConfigurationElementsFor(IOPERATIONCONFLICTDETECTOR_ID);
+		for (IConfigurationElement e : config) {
+			try {
+				Object o = e.createExecutableExtension("class");
+				if (o instanceof IOperationConflictDetector) {
+					this.operationConflictDetectors
+							.add((IOperationConflictDetector) o);
+				}
+			} catch (CoreException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
 	}
 
 	/**
@@ -89,44 +92,16 @@ public class ConflictDetectionEngineImpl implements IConflictDetectionEngine {
 	 * <code>overlappingChangeDetectors</code> and
 	 * <code>violationDetectors</code>.
 	 * 
-	 * @param overlappingChangeDetectors
+	 * @param operationConflictDetectors
 	 *            to set.
 	 * @param violationDetectors
 	 *            to set.
-	 * @param merger
-	 *            to set.
 	 */
 	public ConflictDetectionEngineImpl(
-			List<IOverlappingChangeDetector> overlappingChangeDetectors,
+			List<IOperationConflictDetector> operationConflictDetectors,
 			List<IViolationDetector> violationDetectors) {
-		this.overlappingChangeDetectors.addAll(overlappingChangeDetectors);
+		this.operationConflictDetectors.addAll(operationConflictDetectors);
 		this.violationDetectors.addAll(violationDetectors);
-	}
-
-	/**
-	 * Specifies whether this engine shall search for
-	 * {@link OperationContractViolation OperationContractViolations}.
-	 * 
-	 * @return <code>true</code> if it shall search for
-	 *         {@link OperationContractViolation OperationContractViolations},
-	 *         <code>false</code> otherwise.
-	 */
-	public boolean isOperationContractViolationAware() {
-		return operationContractViolationAware;
-	}
-
-	/**
-	 * Sets whether this engine shall search for
-	 * {@link OperationContractViolation OperationContractViolations}.
-	 * 
-	 * @param operationContractViolationAware
-	 *            <code>true</code> if it shall search for
-	 *            {@link OperationContractViolation OperationContractViolations}
-	 *            , otherwise <code>false</code>.
-	 */
-	public void setOperationContractViolationAware(
-			boolean operationContractViolationAware) {
-		this.operationContractViolationAware = operationContractViolationAware;
 	}
 
 	@Override
@@ -142,7 +117,7 @@ public class ConflictDetectionEngineImpl implements IConflictDetectionEngine {
 	}
 
 	/**
-	 * Applies all currently set {@link #overlappingChangeDetectors} and
+	 * Applies all currently set {@link #operationConflictDetectors} and
 	 * {@link #violationDetectors} to find conflicts which will be added in the
 	 * specified list of <code>conflicts</code>.
 	 * 
@@ -157,27 +132,16 @@ public class ConflictDetectionEngineImpl implements IConflictDetectionEngine {
 			EList<Conflict> conflicts,
 			EList<EquivalentChange> equivalentChanges, IProgressMonitor monitor) {
 
-		int additionalTicks = operationContractViolationAware ? 1 : 0;
 		monitor.beginTask("Detecting Conflicts",
-				overlappingChangeDetectors.size() + violationDetectors.size()
-						+ additionalTicks);
+				operationConflictDetectors.size() + violationDetectors.size());
 
 		try {
 			// perform overlapping change detection
-			for (IOverlappingChangeDetector detector : overlappingChangeDetectors) {
+			for (IOperationConflictDetector detector : operationConflictDetectors) {
 				monitor.subTask(detector.getName());
 				detector.initialize();
-				detector.detectOverlappingChanges(threeWayDiff, conflicts,
+				detector.detectOperationConflicts(threeWayDiff, conflicts,
 						equivalentChanges, new SubProgressMonitor(monitor, 1));
-				monitor.worked(1);
-			}
-
-			// perform operation contract violation detection
-			if (operationContractViolationAware) {
-				operationContractViolationDetector
-						.detectOperationContractViolations(threeWayDiff,
-								conflicts, equivalentChanges,
-								new SubProgressMonitor(monitor, 1));
 				monitor.worked(1);
 			}
 
@@ -201,8 +165,8 @@ public class ConflictDetectionEngineImpl implements IConflictDetectionEngine {
 	}
 
 	@Override
-	public List<IOverlappingChangeDetector> getOverlappingChangeDetectors() {
-		return overlappingChangeDetectors;
+	public List<IOperationConflictDetector> getOperationConflictDetectors() {
+		return operationConflictDetectors;
 	}
 
 	@Override

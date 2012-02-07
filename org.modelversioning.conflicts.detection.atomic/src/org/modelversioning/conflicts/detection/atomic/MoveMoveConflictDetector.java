@@ -10,7 +10,7 @@
  * </copyright>
  */
 
-package org.modelversioning.conflicts.detection.impl;
+package org.modelversioning.conflicts.detection.atomic;
 
 import java.util.List;
 
@@ -24,11 +24,11 @@ import org.modelversioning.conflictreport.EquivalentChange;
 import org.modelversioning.conflictreport.conflict.Conflict;
 import org.modelversioning.conflictreport.conflict.MoveMove;
 import org.modelversioning.conflicts.detection.IThreeWayDiffProvider;
-import org.modelversioning.conflicts.detection.engine.IOverlappingChangeDetector;
+import org.modelversioning.conflicts.detection.engine.IOperationConflictDetector;
 import org.modelversioning.core.util.EcoreUtil;
 
 /**
- * {@link IOverlappingChangeDetector} for detecting {@link MoveMove} Conflicts.
+ * {@link IOperationConflictDetector} for detecting {@link MoveMove} Conflicts.
  * 
  * <p>
  * {@link MoveMove} conflicts occur whenever the same object has been moved to
@@ -39,7 +39,7 @@ import org.modelversioning.core.util.EcoreUtil;
  * @author <a href="mailto:langer@big.tuwien.ac.at">Philip Langer</a>
  * 
  */
-public class MoveMoveConflictDetector implements IOverlappingChangeDetector {
+public class MoveMoveConflictDetector implements IOperationConflictDetector {
 
 	private static final String NAME = "Move Move Conflict Detector";
 
@@ -77,7 +77,7 @@ public class MoveMoveConflictDetector implements IOverlappingChangeDetector {
 	 * {@link EStructuralFeature}.
 	 */
 	@Override
-	public void detectOverlappingChanges(IThreeWayDiffProvider threeWayDiff,
+	public void detectOperationConflicts(IThreeWayDiffProvider threeWayDiff,
 			EList<Conflict> conflicts,
 			EList<EquivalentChange> equivalentChanges, IProgressMonitor monitor) {
 		EList<EObject> movedEObjects = threeWayDiff.getMovedEObjects(Side.LEFT,

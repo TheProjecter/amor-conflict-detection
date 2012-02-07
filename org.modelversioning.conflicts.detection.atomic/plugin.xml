@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.modelversioning.conflicts.detection.operationconflictdetector">
+      <detector
+            class="org.modelversioning.conflicts.detection.atomic.DeleteUpdateConflictDetector">
+      </detector>
+      <detector
+            class="org.modelversioning.conflicts.detection.atomic.DeleteUseConflictDetector">
+      </detector>
+      <detector
+            class="org.modelversioning.conflicts.detection.atomic.MoveMoveConflictDetector">
+      </detector>
+      <detector
+            class="org.modelversioning.conflicts.detection.atomic.UpdateUpdateConflictDetector">
+      </detector>
+   </extension>
+
+</plugin>

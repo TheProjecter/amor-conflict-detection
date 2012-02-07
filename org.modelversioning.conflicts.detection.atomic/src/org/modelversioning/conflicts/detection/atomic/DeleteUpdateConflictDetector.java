@@ -10,7 +10,7 @@
  * </copyright>
  */
 
-package org.modelversioning.conflicts.detection.impl;
+package org.modelversioning.conflicts.detection.atomic;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -30,10 +30,10 @@ import org.modelversioning.conflictreport.EquivalentChange;
 import org.modelversioning.conflictreport.conflict.Conflict;
 import org.modelversioning.conflictreport.conflict.DeleteUpdate;
 import org.modelversioning.conflicts.detection.IThreeWayDiffProvider;
-import org.modelversioning.conflicts.detection.engine.IOverlappingChangeDetector;
+import org.modelversioning.conflicts.detection.engine.IOperationConflictDetector;
 
 /**
- * {@link IOverlappingChangeDetector} for detecting Delete/Update Conflicts.
+ * {@link IOperationConflictDetector} for detecting Delete/Update Conflicts.
  * 
  * <p>
  * Delete/Update conflicts occur if an updated element has been concurrently
@@ -57,7 +57,7 @@ import org.modelversioning.conflicts.detection.engine.IOverlappingChangeDetector
  * @author <a href="mailto:langer@big.tuwien.ac.at">Philip Langer</a>
  * 
  */
-public class DeleteUpdateConflictDetector implements IOverlappingChangeDetector {
+public class DeleteUpdateConflictDetector implements IOperationConflictDetector {
 
 	private static final String DIFF_HASH_SEP = "|";
 
@@ -113,7 +113,7 @@ public class DeleteUpdateConflictDetector implements IOverlappingChangeDetector 
 	 * Detects concurrent update and delete of the same {@link EObject}.
 	 */
 	@Override
-	public void detectOverlappingChanges(IThreeWayDiffProvider threeWayDiff,
+	public void detectOperationConflicts(IThreeWayDiffProvider threeWayDiff,
 			EList<Conflict> conflicts,
 			EList<EquivalentChange> equivalentChanges, IProgressMonitor monitor) {
 		ignoredDiffElements.clear();

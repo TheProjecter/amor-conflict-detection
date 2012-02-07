@@ -1,10 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Atomic Conflicts Detection
-Bundle-SymbolicName: org.modelversioning.conflicts.detection.composite
+Bundle-Name: Composite Operation Conflicts Detection
+Bundle-SymbolicName: org.modelversioning.conflicts.detection.composite;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: modelversioning.org
 Require-Bundle: org.eclipse.core.runtime,
- org.modelversioning.conflicts.detection;bundle-version="1.0.0"
+ org.modelversioning.conflicts.detection;bundle-version="1.0.0",
+ org.modelversioning.operations.execution;bundle-version="1.0.0",
+ org.modelversioning.operations.repository;bundle-version="1.0.0",
+ org.modelversioning.operations;bundle-version="1.0.0",
+ org.modelversioning.operations.detection;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
+Export-Package: org.modelversioning.conflicts.detection.composite

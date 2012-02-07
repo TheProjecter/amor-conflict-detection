@@ -1,17 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Conflicts Detection
-Bundle-SymbolicName: org.modelversioning.conflicts.detection
+Bundle-SymbolicName: org.modelversioning.conflicts.detection;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.modelversioning.conflicts.detection.ConflictDetectionPlugin
 Bundle-Vendor: modelversioning.org
 Require-Bundle: org.eclipse.core.runtime,
- org.modelversioning.core.diff;bundle-version="1.0.0",
- org.modelversioning.core.match;bundle-version="1.0.0",
- org.modelversioning.operations;bundle-version="1.0.0",
- org.modelversioning.operations.detection;bundle-version="1.0.0",
- org.modelversioning.conflicts;bundle-version="1.0.0",
- org.modelversioning.core;bundle-version="1.0.0",
+ org.modelversioning.core.diff;bundle-version="1.0.0";visibility:=reexport,
+ org.modelversioning.core.match;bundle-version="1.0.0";visibility:=reexport,
+ org.modelversioning.conflicts;bundle-version="1.0.0";visibility:=reexport,
+ org.modelversioning.core;bundle-version="1.0.0";visibility:=reexport,
  org.modelversioning.operations.execution;bundle-version="1.0.0",
  org.modelversioning.merge;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -10,7 +10,7 @@
  * </copyright>
  */
 
-package org.modelversioning.conflicts.detection.impl;
+package org.modelversioning.conflicts.detection.composite;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -21,7 +21,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.eclipse.core.runtime.Assert;
-import org.eclipse.core.runtime.SubProgressMonitor;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.compare.diff.metamodel.ComparisonResourceSnapshot;
@@ -43,6 +43,7 @@ import org.modelversioning.conflictreport.conflict.OperationContractViolation;
 import org.modelversioning.conflictreport.conflict.ViolatedPrecondition;
 import org.modelversioning.conflictreport.conflict.ViolationSeverity;
 import org.modelversioning.conflicts.detection.IThreeWayDiffProvider;
+import org.modelversioning.conflicts.detection.engine.IOperationConflictDetector;
 import org.modelversioning.core.conditions.Condition;
 import org.modelversioning.core.conditions.ConditionsModel;
 import org.modelversioning.core.conditions.EvaluationResult;
@@ -87,7 +88,8 @@ import org.modelversioning.operations.util.OperationsUtil;
  * @author <a href="mailto:langer@big.tuwien.ac.at">Philip Langer</a>
  * 
  */
-public class OperationContractViolationDetector {
+public class OperationContractViolationDetector implements
+		IOperationConflictDetector {
 
 	/**
 	 * Thrown if an object is missing for creating a complete binding.
@@ -220,6 +222,34 @@ public class OperationContractViolationDetector {
 	 */
 	private Map<OperationOccurrence, ITemplateBinding> unselectedBindingMap;
 
+	@Override
+	public String getId() {
+		return "org.modelversioning.conflicts.detection.deleteUse";
+	}
+
+	@Override
+	public String getTargetModelNsURI() {
+		return "*";
+	}
+
+	@Override
+	public String getName() {
+		return "Operation Contract Violation Detector";
+	}
+
+	@Override
+	public void initialize() {
+		// noop
+	}
+
+	@Override
+	public void detectOperationConflicts(IThreeWayDiffProvider threeWayDiff,
+			EList<Conflict> conflicts,
+			EList<EquivalentChange> equivalentChanges, IProgressMonitor monitor) {
+		detectOperationContractViolations(threeWayDiff, conflicts,
+				equivalentChanges, monitor);
+	}
+
 	/**
 	 * Returns the currently set {@link IOperationBindingGenerator}.
 	 * 
@@ -259,8 +289,7 @@ public class OperationContractViolationDetector {
 	 */
 	public void detectOperationContractViolations(
 			IThreeWayDiffProvider threeWayDiff, EList<Conflict> conflicts,
-			EList<EquivalentChange> equivalentChanges,
-			SubProgressMonitor subProgressMonitor) {
+			EList<EquivalentChange> equivalentChanges, IProgressMonitor monitor) {
 
 		// initialize map of unselected bindings
 		unselectedBindingMap = new HashMap<OperationOccurrence, ITemplateBinding>();
@@ -794,7 +823,8 @@ public class OperationContractViolationDetector {
 		for (Template nacTemplate : getNACTemplates(nacConditionsModel)) {
 			List<EObject> boundObjects = getBoundObjects(nacTemplate.getName(),
 					diagnostics.getNacBinding());
-			if (boundObjects == null) continue;
+			if (boundObjects == null)
+				continue;
 			for (EObject boundObject : boundObjects) {
 				ModelElementChange addElement = threeWayDiff.getAddElement(
 						boundObject, side);

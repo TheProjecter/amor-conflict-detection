@@ -40,18 +40,18 @@ public interface IConflictDetectionEngine {
 			IProgressMonitor monitor);
 
 	/**
-	 * Returns currently set {@link IOverlappingChangeDetector
+	 * Returns currently set {@link IOperationConflictDetector
 	 * IOverlappingChangeDetectors} conducted by this engine for conflict
 	 * detection.
 	 * 
 	 * <p>
 	 * This list is modifiable and may be used for adding, sorting, and removing
-	 * {@link IOverlappingChangeDetector IOverlappingChangeDetectors}.
+	 * {@link IOperationConflictDetector IOverlappingChangeDetectors}.
 	 * </p>
 	 * 
-	 * @return list of currently set {@link IOverlappingChangeDetector}s.
+	 * @return list of currently set {@link IOperationConflictDetector}s.
 	 */
-	public List<IOverlappingChangeDetector> getOverlappingChangeDetectors();
+	public List<IOperationConflictDetector> getOperationConflictDetectors();
 
 	/**
 	 * Returns currently set {@link IViolationDetector IViolationDetectors}

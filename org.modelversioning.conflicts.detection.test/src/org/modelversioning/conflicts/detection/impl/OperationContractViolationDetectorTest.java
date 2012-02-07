@@ -44,6 +44,7 @@ import org.modelversioning.conflictreport.conflict.MatchingNegativeApplicationCo
 import org.modelversioning.conflictreport.conflict.MissingObject;
 import org.modelversioning.conflictreport.conflict.OperationContractViolation;
 import org.modelversioning.conflictreport.conflict.ViolatedPrecondition;
+import org.modelversioning.conflicts.detection.composite.OperationContractViolationDetector;
 import org.modelversioning.core.conditions.util.ConditionsUtil;
 import org.modelversioning.core.diff.service.DiffService;
 import org.modelversioning.core.diff.util.DiffUtil;

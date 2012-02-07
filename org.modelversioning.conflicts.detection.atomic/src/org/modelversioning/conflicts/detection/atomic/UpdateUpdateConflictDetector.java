@@ -10,7 +10,7 @@
  * </copyright>
  */
 
-package org.modelversioning.conflicts.detection.impl;
+package org.modelversioning.conflicts.detection.atomic;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,11 +26,11 @@ import org.modelversioning.conflictreport.conflict.Conflict;
 import org.modelversioning.conflictreport.conflict.MoveMove;
 import org.modelversioning.conflictreport.conflict.UpdateUpdate;
 import org.modelversioning.conflicts.detection.IThreeWayDiffProvider;
-import org.modelversioning.conflicts.detection.engine.IOverlappingChangeDetector;
+import org.modelversioning.conflicts.detection.engine.IOperationConflictDetector;
 import org.modelversioning.core.diff.util.DiffUtil;
 
 /**
- * {@link IOverlappingChangeDetector} for detecting {@link UpdateUpdate} Conflicts.
+ * {@link IOperationConflictDetector} for detecting {@link UpdateUpdate} Conflicts.
  * 
  * <p>
  * {@link UpdateUpdate} conflicts occur if the same single-valued or ordered
@@ -63,7 +63,7 @@ import org.modelversioning.core.diff.util.DiffUtil;
  * @author <a href="mailto:langer@big.tuwien.ac.at">Philip Langer</a>
  * 
  */
-public class UpdateUpdateConflictDetector implements IOverlappingChangeDetector {
+public class UpdateUpdateConflictDetector implements IOperationConflictDetector {
 
 	private static final String NAME = "Update Update Conflict Detector";
 
@@ -106,7 +106,7 @@ public class UpdateUpdateConflictDetector implements IOverlappingChangeDetector 
 	 * {@link EStructuralFeature}.
 	 */
 	@Override
-	public void detectOverlappingChanges(IThreeWayDiffProvider threeWayDiff,
+	public void detectOperationConflicts(IThreeWayDiffProvider threeWayDiff,
 			EList<Conflict> conflicts,
 			EList<EquivalentChange> equivalentChanges, IProgressMonitor monitor) {
 		EList<EObject> updatedEObjects = threeWayDiff.getUpdatedEObjects(

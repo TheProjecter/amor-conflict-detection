@@ -25,7 +25,7 @@ import org.modelversioning.conflicts.detection.IThreeWayDiffProvider;
  * @author <a href="mailto:langer@big.tuwien.ac.at">Philip Langer</a>
  * 
  */
-public interface IOverlappingChangeDetector extends IConflictDetector {
+public interface IOperationConflictDetector extends IConflictDetector {
 
 	/**
 	 * Searches {@link OverlappingChange OverlappingChanges} in the specified
@@ -41,7 +41,7 @@ public interface IOverlappingChangeDetector extends IConflictDetector {
 	 * @param monitor
 	 *            to report the progress.
 	 */
-	public void detectOverlappingChanges(IThreeWayDiffProvider threeWayDiff,
+	public void detectOperationConflicts(IThreeWayDiffProvider threeWayDiff,
 			EList<Conflict> conflicts,
 			EList<EquivalentChange> equivalentChanges, IProgressMonitor monitor);
 
