@@ -225,6 +225,29 @@ public class ConflictSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ConflictPackage.SIGNIFIER_WARNINGS: {
+				SignifierWarnings signifierWarnings = (SignifierWarnings)theEObject;
+				T result = caseSignifierWarnings(signifierWarnings);
+				if (result == null) result = caseConflict(signifierWarnings);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConflictPackage.UNEXPECTED_SIGNIFIER_MATCH: {
+				UnexpectedSignifierMatch unexpectedSignifierMatch = (UnexpectedSignifierMatch)theEObject;
+				T result = caseUnexpectedSignifierMatch(unexpectedSignifierMatch);
+				if (result == null) result = caseSignifierWarnings(unexpectedSignifierMatch);
+				if (result == null) result = caseConflict(unexpectedSignifierMatch);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConflictPackage.CONCURRENT_SIGNIFIER_CHANGE: {
+				ConcurrentSignifierChange concurrentSignifierChange = (ConcurrentSignifierChange)theEObject;
+				T result = caseConcurrentSignifierChange(concurrentSignifierChange);
+				if (result == null) result = caseSignifierWarnings(concurrentSignifierChange);
+				if (result == null) result = caseConflict(concurrentSignifierChange);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -511,6 +534,51 @@ public class ConflictSwitch<T> {
 	 * @generated
 	 */
 	public T caseMatchingNegativeApplicationCondition(MatchingNegativeApplicationCondition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Signifier Warnings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Signifier Warnings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSignifierWarnings(SignifierWarnings object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unexpected Signifier Match</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unexpected Signifier Match</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnexpectedSignifierMatch(UnexpectedSignifierMatch object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Concurrent Signifier Change</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Concurrent Signifier Change</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConcurrentSignifierChange(ConcurrentSignifierChange object) {
 		return null;
 	}
 

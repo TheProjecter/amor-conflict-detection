@@ -159,6 +159,24 @@ public interface ConflictFactory extends EFactory {
 	MatchingNegativeApplicationCondition createMatchingNegativeApplicationCondition();
 
 	/**
+	 * Returns a new object of class '<em>Unexpected Signifier Match</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unexpected Signifier Match</em>'.
+	 * @generated
+	 */
+	UnexpectedSignifierMatch createUnexpectedSignifierMatch();
+
+	/**
+	 * Returns a new object of class '<em>Concurrent Signifier Change</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Concurrent Signifier Change</em>'.
+	 * @generated
+	 */
+	ConcurrentSignifierChange createConcurrentSignifierChange();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

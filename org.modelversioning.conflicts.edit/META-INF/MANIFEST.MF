@@ -22,5 +22,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ocl;visibility:=reexport,
  org.eclipse.ocl.edit;visibility:=reexport,
  org.eclipse.ocl.ecore;visibility:=reexport,
- org.eclipse.ocl.ecore.edit;visibility:=reexport
+ org.eclipse.ocl.ecore.edit;visibility:=reexport,
+ org.modelversioning.operations.detection;bundle-version="1.0.0",
+ org.modelversioning.operations.execution;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

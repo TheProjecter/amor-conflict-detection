@@ -77,4 +77,15 @@
         eType="ecore:EClass ../../org.modelversioning.core.conditions/models/templateBindings.ecore#//TemplateBindingCollection"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SignifierWarnings" abstract="true" eSuperTypes="#//Conflict">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruleName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnexpectedSignifierMatch" eSuperTypes="#//SignifierWarnings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftObject" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightObject" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConcurrentSignifierChange" eSuperTypes="#//SignifierWarnings">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+  </eClassifiers>
 </ecore:EPackage>

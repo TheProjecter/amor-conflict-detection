@@ -798,6 +798,171 @@ public interface ConflictPackage extends EPackage {
 	int MATCHING_NEGATIVE_APPLICATION_CONDITION_FEATURE_COUNT = OPERATION_CONTRACT_DIAGNOSTICS_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.modelversioning.conflictreport.conflict.impl.SignifierWarningsImpl <em>Signifier Warnings</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.modelversioning.conflictreport.conflict.impl.SignifierWarningsImpl
+	 * @see org.modelversioning.conflictreport.conflict.impl.ConflictPackageImpl#getSignifierWarnings()
+	 * @generated
+	 */
+	int SIGNIFIER_WARNINGS = 19;
+
+	/**
+	 * The feature id for the '<em><b>Left Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFIER_WARNINGS__LEFT_CHANGE = CONFLICT__LEFT_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Right Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFIER_WARNINGS__RIGHT_CHANGE = CONFLICT__RIGHT_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Rule Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFIER_WARNINGS__RULE_NAME = CONFLICT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Signifier Warnings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNIFIER_WARNINGS_FEATURE_COUNT = CONFLICT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.modelversioning.conflictreport.conflict.impl.UnexpectedSignifierMatchImpl <em>Unexpected Signifier Match</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.modelversioning.conflictreport.conflict.impl.UnexpectedSignifierMatchImpl
+	 * @see org.modelversioning.conflictreport.conflict.impl.ConflictPackageImpl#getUnexpectedSignifierMatch()
+	 * @generated
+	 */
+	int UNEXPECTED_SIGNIFIER_MATCH = 20;
+
+	/**
+	 * The feature id for the '<em><b>Left Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNEXPECTED_SIGNIFIER_MATCH__LEFT_CHANGE = SIGNIFIER_WARNINGS__LEFT_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Right Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNEXPECTED_SIGNIFIER_MATCH__RIGHT_CHANGE = SIGNIFIER_WARNINGS__RIGHT_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Rule Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNEXPECTED_SIGNIFIER_MATCH__RULE_NAME = SIGNIFIER_WARNINGS__RULE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Left Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNEXPECTED_SIGNIFIER_MATCH__LEFT_OBJECT = SIGNIFIER_WARNINGS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNEXPECTED_SIGNIFIER_MATCH__RIGHT_OBJECT = SIGNIFIER_WARNINGS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Unexpected Signifier Match</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNEXPECTED_SIGNIFIER_MATCH_FEATURE_COUNT = SIGNIFIER_WARNINGS_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link org.modelversioning.conflictreport.conflict.impl.ConcurrentSignifierChangeImpl <em>Concurrent Signifier Change</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.modelversioning.conflictreport.conflict.impl.ConcurrentSignifierChangeImpl
+	 * @see org.modelversioning.conflictreport.conflict.impl.ConflictPackageImpl#getConcurrentSignifierChange()
+	 * @generated
+	 */
+	int CONCURRENT_SIGNIFIER_CHANGE = 21;
+
+	/**
+	 * The feature id for the '<em><b>Left Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCURRENT_SIGNIFIER_CHANGE__LEFT_CHANGE = SIGNIFIER_WARNINGS__LEFT_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Right Change</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCURRENT_SIGNIFIER_CHANGE__RIGHT_CHANGE = SIGNIFIER_WARNINGS__RIGHT_CHANGE;
+
+	/**
+	 * The feature id for the '<em><b>Rule Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCURRENT_SIGNIFIER_CHANGE__RULE_NAME = SIGNIFIER_WARNINGS__RULE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCURRENT_SIGNIFIER_CHANGE__ORIGINAL_OBJECT = SIGNIFIER_WARNINGS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Concurrent Signifier Change</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCURRENT_SIGNIFIER_CHANGE_FEATURE_COUNT = SIGNIFIER_WARNINGS_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link org.modelversioning.conflictreport.conflict.ViolationSeverity <em>Violation Severity</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -805,7 +970,7 @@ public interface ConflictPackage extends EPackage {
 	 * @see org.modelversioning.conflictreport.conflict.impl.ConflictPackageImpl#getViolationSeverity()
 	 * @generated
 	 */
-	int VIOLATION_SEVERITY = 19;
+	int VIOLATION_SEVERITY = 22;
 
 	/**
 	 * The meta object id for the '{@link org.modelversioning.conflictreport.conflict.BindingSizeDifference <em>Binding Size Difference</em>}' enum.
@@ -815,7 +980,7 @@ public interface ConflictPackage extends EPackage {
 	 * @see org.modelversioning.conflictreport.conflict.impl.ConflictPackageImpl#getBindingSizeDifference()
 	 * @generated
 	 */
-	int BINDING_SIZE_DIFFERENCE = 20;
+	int BINDING_SIZE_DIFFERENCE = 23;
 
 
 	/**
@@ -1196,6 +1361,80 @@ public interface ConflictPackage extends EPackage {
 	EReference getMatchingNegativeApplicationCondition_NacBinding();
 
 	/**
+	 * Returns the meta object for class '{@link org.modelversioning.conflictreport.conflict.SignifierWarnings <em>Signifier Warnings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Signifier Warnings</em>'.
+	 * @see org.modelversioning.conflictreport.conflict.SignifierWarnings
+	 * @generated
+	 */
+	EClass getSignifierWarnings();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.modelversioning.conflictreport.conflict.SignifierWarnings#getRuleName <em>Rule Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rule Name</em>'.
+	 * @see org.modelversioning.conflictreport.conflict.SignifierWarnings#getRuleName()
+	 * @see #getSignifierWarnings()
+	 * @generated
+	 */
+	EAttribute getSignifierWarnings_RuleName();
+
+	/**
+	 * Returns the meta object for class '{@link org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch <em>Unexpected Signifier Match</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unexpected Signifier Match</em>'.
+	 * @see org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch
+	 * @generated
+	 */
+	EClass getUnexpectedSignifierMatch();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch#getLeftObject <em>Left Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Left Object</em>'.
+	 * @see org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch#getLeftObject()
+	 * @see #getUnexpectedSignifierMatch()
+	 * @generated
+	 */
+	EReference getUnexpectedSignifierMatch_LeftObject();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch#getRightObject <em>Right Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Right Object</em>'.
+	 * @see org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch#getRightObject()
+	 * @see #getUnexpectedSignifierMatch()
+	 * @generated
+	 */
+	EReference getUnexpectedSignifierMatch_RightObject();
+
+	/**
+	 * Returns the meta object for class '{@link org.modelversioning.conflictreport.conflict.ConcurrentSignifierChange <em>Concurrent Signifier Change</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Concurrent Signifier Change</em>'.
+	 * @see org.modelversioning.conflictreport.conflict.ConcurrentSignifierChange
+	 * @generated
+	 */
+	EClass getConcurrentSignifierChange();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.modelversioning.conflictreport.conflict.ConcurrentSignifierChange#getOriginalObject <em>Original Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Original Object</em>'.
+	 * @see org.modelversioning.conflictreport.conflict.ConcurrentSignifierChange#getOriginalObject()
+	 * @see #getConcurrentSignifierChange()
+	 * @generated
+	 */
+	EReference getConcurrentSignifierChange_OriginalObject();
+
+	/**
 	 * Returns the meta object for enum '{@link org.modelversioning.conflictreport.conflict.ViolationSeverity <em>Violation Severity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1562,6 +1801,68 @@ public interface ConflictPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MATCHING_NEGATIVE_APPLICATION_CONDITION__NAC_BINDING = eINSTANCE.getMatchingNegativeApplicationCondition_NacBinding();
+
+		/**
+		 * The meta object literal for the '{@link org.modelversioning.conflictreport.conflict.impl.SignifierWarningsImpl <em>Signifier Warnings</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.modelversioning.conflictreport.conflict.impl.SignifierWarningsImpl
+		 * @see org.modelversioning.conflictreport.conflict.impl.ConflictPackageImpl#getSignifierWarnings()
+		 * @generated
+		 */
+		EClass SIGNIFIER_WARNINGS = eINSTANCE.getSignifierWarnings();
+
+		/**
+		 * The meta object literal for the '<em><b>Rule Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNIFIER_WARNINGS__RULE_NAME = eINSTANCE.getSignifierWarnings_RuleName();
+
+		/**
+		 * The meta object literal for the '{@link org.modelversioning.conflictreport.conflict.impl.UnexpectedSignifierMatchImpl <em>Unexpected Signifier Match</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.modelversioning.conflictreport.conflict.impl.UnexpectedSignifierMatchImpl
+		 * @see org.modelversioning.conflictreport.conflict.impl.ConflictPackageImpl#getUnexpectedSignifierMatch()
+		 * @generated
+		 */
+		EClass UNEXPECTED_SIGNIFIER_MATCH = eINSTANCE.getUnexpectedSignifierMatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Left Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNEXPECTED_SIGNIFIER_MATCH__LEFT_OBJECT = eINSTANCE.getUnexpectedSignifierMatch_LeftObject();
+
+		/**
+		 * The meta object literal for the '<em><b>Right Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNEXPECTED_SIGNIFIER_MATCH__RIGHT_OBJECT = eINSTANCE.getUnexpectedSignifierMatch_RightObject();
+
+		/**
+		 * The meta object literal for the '{@link org.modelversioning.conflictreport.conflict.impl.ConcurrentSignifierChangeImpl <em>Concurrent Signifier Change</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.modelversioning.conflictreport.conflict.impl.ConcurrentSignifierChangeImpl
+		 * @see org.modelversioning.conflictreport.conflict.impl.ConflictPackageImpl#getConcurrentSignifierChange()
+		 * @generated
+		 */
+		EClass CONCURRENT_SIGNIFIER_CHANGE = eINSTANCE.getConcurrentSignifierChange();
+
+		/**
+		 * The meta object literal for the '<em><b>Original Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONCURRENT_SIGNIFIER_CHANGE__ORIGINAL_OBJECT = eINSTANCE.getConcurrentSignifierChange_OriginalObject();
 
 		/**
 		 * The meta object literal for the '{@link org.modelversioning.conflictreport.conflict.ViolationSeverity <em>Violation Severity</em>}' enum.

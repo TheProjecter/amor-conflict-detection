@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.modelversioning.conflictreport.conflict.AddAdd;
 import org.modelversioning.conflictreport.conflict.BindingSizeDifference;
+import org.modelversioning.conflictreport.conflict.ConcurrentSignifierChange;
 import org.modelversioning.conflictreport.conflict.ConditionViolation;
 import org.modelversioning.conflictreport.conflict.Conflict;
 import org.modelversioning.conflictreport.conflict.ConflictFactory;
@@ -34,6 +35,8 @@ import org.modelversioning.conflictreport.conflict.MoveMove;
 import org.modelversioning.conflictreport.conflict.OperationContractDiagnostics;
 import org.modelversioning.conflictreport.conflict.OperationContractViolation;
 import org.modelversioning.conflictreport.conflict.OverlappingChange;
+import org.modelversioning.conflictreport.conflict.SignifierWarnings;
+import org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch;
 import org.modelversioning.conflictreport.conflict.UpdateUpdate;
 import org.modelversioning.conflictreport.conflict.ViolatedPrecondition;
 import org.modelversioning.conflictreport.conflict.Violation;
@@ -184,6 +187,27 @@ public class ConflictPackageImpl extends EPackageImpl implements ConflictPackage
 	 * @generated
 	 */
 	private EClass matchingNegativeApplicationConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass signifierWarningsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unexpectedSignifierMatchEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass concurrentSignifierChangeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -592,6 +616,69 @@ public class ConflictPackageImpl extends EPackageImpl implements ConflictPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSignifierWarnings() {
+		return signifierWarningsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSignifierWarnings_RuleName() {
+		return (EAttribute)signifierWarningsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnexpectedSignifierMatch() {
+		return unexpectedSignifierMatchEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUnexpectedSignifierMatch_LeftObject() {
+		return (EReference)unexpectedSignifierMatchEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUnexpectedSignifierMatch_RightObject() {
+		return (EReference)unexpectedSignifierMatchEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConcurrentSignifierChange() {
+		return concurrentSignifierChangeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConcurrentSignifierChange_OriginalObject() {
+		return (EReference)concurrentSignifierChangeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getViolationSeverity() {
 		return violationSeverityEEnum;
 	}
@@ -688,6 +775,16 @@ public class ConflictPackageImpl extends EPackageImpl implements ConflictPackage
 		createEReference(matchingNegativeApplicationConditionEClass, MATCHING_NEGATIVE_APPLICATION_CONDITION__NEGATIVE_APPLICATION_CONDITION);
 		createEReference(matchingNegativeApplicationConditionEClass, MATCHING_NEGATIVE_APPLICATION_CONDITION__NAC_BINDING);
 
+		signifierWarningsEClass = createEClass(SIGNIFIER_WARNINGS);
+		createEAttribute(signifierWarningsEClass, SIGNIFIER_WARNINGS__RULE_NAME);
+
+		unexpectedSignifierMatchEClass = createEClass(UNEXPECTED_SIGNIFIER_MATCH);
+		createEReference(unexpectedSignifierMatchEClass, UNEXPECTED_SIGNIFIER_MATCH__LEFT_OBJECT);
+		createEReference(unexpectedSignifierMatchEClass, UNEXPECTED_SIGNIFIER_MATCH__RIGHT_OBJECT);
+
+		concurrentSignifierChangeEClass = createEClass(CONCURRENT_SIGNIFIER_CHANGE);
+		createEReference(concurrentSignifierChangeEClass, CONCURRENT_SIGNIFIER_CHANGE__ORIGINAL_OBJECT);
+
 		// Create enums
 		violationSeverityEEnum = createEEnum(VIOLATION_SEVERITY);
 		bindingSizeDifferenceEEnum = createEEnum(BINDING_SIZE_DIFFERENCE);
@@ -743,6 +840,9 @@ public class ConflictPackageImpl extends EPackageImpl implements ConflictPackage
 		missingObjectEClass.getESuperTypes().add(this.getOperationContractDiagnostics());
 		differentBindingSizeEClass.getESuperTypes().add(this.getOperationContractDiagnostics());
 		matchingNegativeApplicationConditionEClass.getESuperTypes().add(this.getOperationContractDiagnostics());
+		signifierWarningsEClass.getESuperTypes().add(this.getConflict());
+		unexpectedSignifierMatchEClass.getESuperTypes().add(this.getSignifierWarnings());
+		concurrentSignifierChangeEClass.getESuperTypes().add(this.getSignifierWarnings());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(conflictEClass, Conflict.class, "Conflict", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -799,6 +899,16 @@ public class ConflictPackageImpl extends EPackageImpl implements ConflictPackage
 		initEClass(matchingNegativeApplicationConditionEClass, MatchingNegativeApplicationCondition.class, "MatchingNegativeApplicationCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMatchingNegativeApplicationCondition_NegativeApplicationCondition(), theOperationsPackage.getNegativeApplicationCondition(), null, "negativeApplicationCondition", null, 1, 1, MatchingNegativeApplicationCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMatchingNegativeApplicationCondition_NacBinding(), theTemplatebindingsPackage.getTemplateBindingCollection(), null, "nacBinding", null, 1, 1, MatchingNegativeApplicationCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(signifierWarningsEClass, SignifierWarnings.class, "SignifierWarnings", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSignifierWarnings_RuleName(), ecorePackage.getEString(), "ruleName", null, 1, 1, SignifierWarnings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(unexpectedSignifierMatchEClass, UnexpectedSignifierMatch.class, "UnexpectedSignifierMatch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUnexpectedSignifierMatch_LeftObject(), theEcorePackage.getEObject(), null, "leftObject", null, 0, 1, UnexpectedSignifierMatch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnexpectedSignifierMatch_RightObject(), theEcorePackage.getEObject(), null, "rightObject", null, 0, 1, UnexpectedSignifierMatch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(concurrentSignifierChangeEClass, ConcurrentSignifierChange.class, "ConcurrentSignifierChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConcurrentSignifierChange_OriginalObject(), theEcorePackage.getEObject(), null, "originalObject", null, 0, 1, ConcurrentSignifierChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(violationSeverityEEnum, ViolationSeverity.class, "ViolationSeverity");

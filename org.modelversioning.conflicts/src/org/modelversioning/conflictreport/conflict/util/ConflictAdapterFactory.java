@@ -146,6 +146,18 @@ public class ConflictAdapterFactory extends AdapterFactoryImpl {
 				return createMatchingNegativeApplicationConditionAdapter();
 			}
 			@Override
+			public Adapter caseSignifierWarnings(SignifierWarnings object) {
+				return createSignifierWarningsAdapter();
+			}
+			@Override
+			public Adapter caseUnexpectedSignifierMatch(UnexpectedSignifierMatch object) {
+				return createUnexpectedSignifierMatchAdapter();
+			}
+			@Override
+			public Adapter caseConcurrentSignifierChange(ConcurrentSignifierChange object) {
+				return createConcurrentSignifierChangeAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -428,6 +440,48 @@ public class ConflictAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMatchingNegativeApplicationConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.modelversioning.conflictreport.conflict.SignifierWarnings <em>Signifier Warnings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.modelversioning.conflictreport.conflict.SignifierWarnings
+	 * @generated
+	 */
+	public Adapter createSignifierWarningsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch <em>Unexpected Signifier Match</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch
+	 * @generated
+	 */
+	public Adapter createUnexpectedSignifierMatchAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.modelversioning.conflictreport.conflict.ConcurrentSignifierChange <em>Concurrent Signifier Change</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.modelversioning.conflictreport.conflict.ConcurrentSignifierChange
+	 * @generated
+	 */
+	public Adapter createConcurrentSignifierChangeAdapter() {
 		return null;
 	}
 

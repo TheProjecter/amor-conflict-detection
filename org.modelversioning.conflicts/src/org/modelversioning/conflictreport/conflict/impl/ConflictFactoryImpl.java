@@ -74,6 +74,8 @@ public class ConflictFactoryImpl extends EFactoryImpl implements ConflictFactory
 			case ConflictPackage.DIFFERENT_BINDING_SIZE: return createDifferentBindingSize();
 			case ConflictPackage.CONDITION_VIOLATION: return createConditionViolation();
 			case ConflictPackage.MATCHING_NEGATIVE_APPLICATION_CONDITION: return createMatchingNegativeApplicationCondition();
+			case ConflictPackage.UNEXPECTED_SIGNIFIER_MATCH: return createUnexpectedSignifierMatch();
+			case ConflictPackage.CONCURRENT_SIGNIFIER_CHANGE: return createConcurrentSignifierChange();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -261,6 +263,26 @@ public class ConflictFactoryImpl extends EFactoryImpl implements ConflictFactory
 	public MatchingNegativeApplicationCondition createMatchingNegativeApplicationCondition() {
 		MatchingNegativeApplicationConditionImpl matchingNegativeApplicationCondition = new MatchingNegativeApplicationConditionImpl();
 		return matchingNegativeApplicationCondition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnexpectedSignifierMatch createUnexpectedSignifierMatch() {
+		UnexpectedSignifierMatchImpl unexpectedSignifierMatch = new UnexpectedSignifierMatchImpl();
+		return unexpectedSignifierMatch;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConcurrentSignifierChange createConcurrentSignifierChange() {
+		ConcurrentSignifierChangeImpl concurrentSignifierChange = new ConcurrentSignifierChangeImpl();
+		return concurrentSignifierChange;
 	}
 
 	/**

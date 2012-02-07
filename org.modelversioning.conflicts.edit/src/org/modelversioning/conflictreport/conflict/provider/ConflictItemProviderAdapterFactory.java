@@ -421,6 +421,52 @@ public class ConflictItemProviderAdapterFactory extends ConflictAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UnexpectedSignifierMatchItemProvider unexpectedSignifierMatchItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.modelversioning.conflictreport.conflict.UnexpectedSignifierMatch}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUnexpectedSignifierMatchAdapter() {
+		if (unexpectedSignifierMatchItemProvider == null) {
+			unexpectedSignifierMatchItemProvider = new UnexpectedSignifierMatchItemProvider(this);
+		}
+
+		return unexpectedSignifierMatchItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.modelversioning.conflictreport.conflict.ConcurrentSignifierChange} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConcurrentSignifierChangeItemProvider concurrentSignifierChangeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.modelversioning.conflictreport.conflict.ConcurrentSignifierChange}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConcurrentSignifierChangeAdapter() {
+		if (concurrentSignifierChangeItemProvider == null) {
+			concurrentSignifierChangeItemProvider = new ConcurrentSignifierChangeItemProvider(this);
+		}
+
+		return concurrentSignifierChangeItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -534,6 +580,8 @@ public class ConflictItemProviderAdapterFactory extends ConflictAdapterFactory i
 		if (differentBindingSizeItemProvider != null) differentBindingSizeItemProvider.dispose();
 		if (conditionViolationItemProvider != null) conditionViolationItemProvider.dispose();
 		if (matchingNegativeApplicationConditionItemProvider != null) matchingNegativeApplicationConditionItemProvider.dispose();
+		if (unexpectedSignifierMatchItemProvider != null) unexpectedSignifierMatchItemProvider.dispose();
+		if (concurrentSignifierChangeItemProvider != null) concurrentSignifierChangeItemProvider.dispose();
 	}
 
 }
