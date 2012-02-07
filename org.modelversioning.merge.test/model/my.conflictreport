@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conflictreport:ConflictReport xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:conflict="http://modelversioning.org/conflict/1.0" xmlns:conflictreport="http://modelversioning.org/conflictreport/1.0"
+    xmlns:diff="http://www.eclipse.org/emf/compare/diff/1.1" xmlns:match="http://www.eclipse.org/emf/compare/match/1.1" xmi:id="_YzjgYGwgEeClRppVsajy6w">
+  <conflicts xsi:type="conflict:UpdateUpdate" xmi:id="_Y0mCMGwgEeClRppVsajy6w" leftChange="#_Y0mCPWwgEeClRppVsajy6w"
+      rightChange="#_Y0mpSWwgEeClRppVsajy6w"/>
+  <conflicts xsi:type="conflict:DeleteUpdate" xmi:id="_Y0mCMWwgEeClRppVsajy6w" leftChange="#_Y0mCOGwgEeClRppVsajy6w"
+      rightChange="#_Y0mpSmwgEeClRppVsajy6w"/>
+  <equivalentChanges xmi:id="_Y0mCMmwgEeClRppVsajy6w" leftChange="#_Y0mCO2wgEeClRppVsajy6w"
+      rightChange="#_Y0mpR2wgEeClRppVsajy6w"/>
+  <leftVersion xmi:id="_Y0mCM2wgEeClRppVsajy6w" date="2011-04-21T16:05:17.858+0200">
+    <diff xmi:id="_Y0mCNGwgEeClRppVsajy6w" leftRoots="origin.ecore#_g1FmwTNdEeCDk6pqpI_fUg"
+        rightRoots="left.ecore#_g1FmwTNdEeCDk6pqpI_fUg">
+      <ownedElements xsi:type="diff:DiffGroup" xmi:id="_Y0mCNWwgEeClRppVsajy6w">
+        <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mCNmwgEeClRppVsajy6w"
+            rightParent="origin.ecore#_g1FmwTNdEeCDk6pqpI_fUg">
+          <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mCN2wgEeClRppVsajy6w"
+              rightParent="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg_Chain">
+            <subDiffElements xsi:type="diff:UpdateAttribute" xmi:id="_Y0mCOGwgEeClRppVsajy6w"
+                attribute="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+                leftElement="left.ecore#_g1IDADNdEeCDk6pqpI_fUg_Chain" rightElement="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg_Chain"/>
+          </subDiffElements>
+          <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mCOWwgEeClRppVsajy6w"
+              rightParent="origin.ecore#_g1IqEjNdEeCDk6pqpI_fUg">
+            <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mCOmwgEeClRppVsajy6w"
+                rightParent="origin.ecore#_g1IqEzNdEeCDk6pqpI_fUg">
+              <subDiffElements xsi:type="diff:UpdateAttribute" xmi:id="_Y0mCO2wgEeClRppVsajy6w"
+                  attribute="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+                  leftElement="left.ecore#_g1IqEzNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqEzNdEeCDk6pqpI_fUg"/>
+            </subDiffElements>
+            <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mCPGwgEeClRppVsajy6w"
+                rightParent="origin.ecore#_g1IqGDNdEeCDk6pqpI_fUg">
+              <subDiffElements xsi:type="diff:UpdateAttribute" xmi:id="_Y0mCPWwgEeClRppVsajy6w"
+                  attribute="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+                  leftElement="left.ecore#_g1IqGDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqGDNdEeCDk6pqpI_fUg"/>
+            </subDiffElements>
+          </subDiffElements>
+        </subDiffElements>
+      </ownedElements>
+    </diff>
+    <match xmi:id="_Y0mCPmwgEeClRppVsajy6w" leftRoots="origin.ecore#_g1FmwTNdEeCDk6pqpI_fUg"
+        rightRoots="left.ecore#_g1FmwTNdEeCDk6pqpI_fUg">
+      <matchedElements xsi:type="match:Match2Elements" xmi:id="_Y0mCP2wgEeClRppVsajy6w"
+          similarity="1.0" leftElement="left.ecore#_g1FmwTNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1FmwTNdEeCDk6pqpI_fUg">
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCQGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1IDADNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCQWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1IqEDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqEDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCQmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_YwtnwGwgEeClRppVsajy6w" rightElement="origin.ecore#_Ywp9YWwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCQ2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1KfQDNdEeCDk6pqpI_fUg_partOf"
+            rightElement="origin.ecore#_g1KfQDNdEeCDk6pqpI_fUg_partOf"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCRGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_Ywu142wgEeClRppVsajy6w" rightElement="origin.ecore#_YwsZoGwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCRWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1IDADNdEeCDk6pqpI_fUg_Chain"
+            rightElement="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg_Chain"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCRmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1IqEjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqEjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCR2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1IqEzNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqEzNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCSGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1IqFDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqFDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCSWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_YwuO0GwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrLgGwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCSmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1IqFjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqFjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCS2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_YwuO0WwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrLgWwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCTGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1IqGDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqGDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCTWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1JRIDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1JRIDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCTmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_YwuO0mwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrLgmwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCT2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1JRIjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1JRIjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCUGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_YwuO02wgEeClRppVsajy6w" rightElement="origin.ecore#_YwrykGwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCUWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1JRJDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1JRJDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCUmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1JRJTNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1JRJTNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCU2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1J4MDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1J4MDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCVGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_YwuO1GwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrykWwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCVWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1J4MjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1J4MjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCVmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_YwuO1WwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrykmwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCV2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1J4NDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1J4NDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCWGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_Ywu14GwgEeClRppVsajy6w" rightElement="origin.ecore#_Ywryk2wgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCWWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1J4NjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1J4NjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCWmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_Ywu14WwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrylGwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCW2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_g1KfQDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1KfQDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mCXGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="left.ecore#_Ywu14mwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrylWwgEeClRppVsajy6w"/>
+      </matchedElements>
+    </match>
+  </leftVersion>
+  <rightVersion xmi:id="_Y0mCXWwgEeClRppVsajy6w" date="2011-04-21T16:05:17.880+0200">
+    <diff xmi:id="_Y0mCXmwgEeClRppVsajy6w" leftRoots="origin.ecore#_g1FmwTNdEeCDk6pqpI_fUg"
+        rightRoots="right.ecore#_g1FmwTNdEeCDk6pqpI_fUg">
+      <ownedElements xsi:type="diff:DiffGroup" xmi:id="_Y0mCX2wgEeClRppVsajy6w">
+        <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mpQGwgEeClRppVsajy6w"
+            rightParent="origin.ecore#_g1FmwTNdEeCDk6pqpI_fUg">
+          <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mpQWwgEeClRppVsajy6w"
+              rightParent="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg">
+            <subDiffElements xsi:type="diff:UpdateAttribute" xmi:id="_Y0mpQmwgEeClRppVsajy6w"
+                attribute="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+                leftElement="right.ecore#_g1IDADNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg"/>
+            <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mpQ2wgEeClRppVsajy6w"
+                rightParent="origin.ecore#_g1KfQDNdEeCDk6pqpI_fUg_partOf">
+              <subDiffElements xsi:type="diff:UpdateReference" xmi:id="_Y0mpRGwgEeClRppVsajy6w"
+                  reference="http://www.eclipse.org/emf/2002/Ecore#//ETypedElement/eType"
+                  rightElement="origin.ecore#_g1KfQDNdEeCDk6pqpI_fUg_partOf" leftElement="right.ecore#_g1KfQDNdEeCDk6pqpI_fUg_partOf"
+                  leftTarget="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg_Chain"/>
+            </subDiffElements>
+          </subDiffElements>
+          <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mpRWwgEeClRppVsajy6w"
+              rightParent="origin.ecore#_g1IqEjNdEeCDk6pqpI_fUg">
+            <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mpRmwgEeClRppVsajy6w"
+                rightParent="origin.ecore#_g1IqEzNdEeCDk6pqpI_fUg">
+              <subDiffElements xsi:type="diff:UpdateAttribute" xmi:id="_Y0mpR2wgEeClRppVsajy6w"
+                  attribute="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+                  leftElement="right.ecore#_g1IqEzNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqEzNdEeCDk6pqpI_fUg"/>
+            </subDiffElements>
+            <subDiffElements xsi:type="diff:DiffGroup" xmi:id="_Y0mpSGwgEeClRppVsajy6w"
+                rightParent="origin.ecore#_g1IqGDNdEeCDk6pqpI_fUg">
+              <subDiffElements xsi:type="diff:UpdateAttribute" xmi:id="_Y0mpSWwgEeClRppVsajy6w"
+                  attribute="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"
+                  leftElement="right.ecore#_g1IqGDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqGDNdEeCDk6pqpI_fUg"/>
+            </subDiffElements>
+          </subDiffElements>
+          <subDiffElements xsi:type="diff:ModelElementChangeRightTarget" xmi:id="_Y0mpSmwgEeClRppVsajy6w"
+              leftParent="right.ecore#_g1FmwTNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg_Chain"/>
+        </subDiffElements>
+      </ownedElements>
+    </diff>
+    <match xmi:id="_Y0mpS2wgEeClRppVsajy6w" leftRoots="origin.ecore#_g1FmwTNdEeCDk6pqpI_fUg"
+        rightRoots="right.ecore#_g1FmwTNdEeCDk6pqpI_fUg">
+      <matchedElements xsi:type="match:Match2Elements" xmi:id="_Y0mpTGwgEeClRppVsajy6w"
+          similarity="1.0" leftElement="right.ecore#_g1FmwTNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1FmwTNdEeCDk6pqpI_fUg">
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpTWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1IDADNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpTmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1IqEDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqEDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpT2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_Ywvc8GwgEeClRppVsajy6w" rightElement="origin.ecore#_Ywp9YWwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpUGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1KfQDNdEeCDk6pqpI_fUg_partOf"
+            rightElement="origin.ecore#_g1KfQDNdEeCDk6pqpI_fUg_partOf"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpUWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1IqEjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqEjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpUmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1IqEzNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqEzNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpU2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1IqFDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqFDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpVGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_YwwEAGwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrLgGwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpVWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1IqFjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqFjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpVmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_YwwEAWwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrLgWwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpV2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1IqGDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1IqGDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpWGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1JRIDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1JRIDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpWWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_YwwEAmwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrLgmwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpWmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1JRIjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1JRIjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpW2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_YwwEA2wgEeClRppVsajy6w" rightElement="origin.ecore#_YwrykGwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpXGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1JRJDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1JRJDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpXWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1JRJTNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1JRJTNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpXmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1J4MDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1J4MDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpX2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_YwwEBGwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrykWwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpYGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1J4MjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1J4MjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpYWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_YwwrEGwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrykmwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpYmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1J4NDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1J4NDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpY2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_YwwrEWwgEeClRppVsajy6w" rightElement="origin.ecore#_Ywryk2wgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpZGwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1J4NjNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1J4NjNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpZWwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_YwwrEmwgEeClRppVsajy6w" rightElement="origin.ecore#_YwrylGwgEeClRppVsajy6w"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpZmwgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_g1KfQDNdEeCDk6pqpI_fUg" rightElement="origin.ecore#_g1KfQDNdEeCDk6pqpI_fUg"/>
+        <subMatchElements xsi:type="match:Match2Elements" xmi:id="_Y0mpZ2wgEeClRppVsajy6w"
+            similarity="1.0" leftElement="right.ecore#_YwwrE2wgEeClRppVsajy6w" rightElement="origin.ecore#_YwrylWwgEeClRppVsajy6w"/>
+      </matchedElements>
+      <unmatchedElements xmi:id="_Y0mpaGwgEeClRppVsajy6w" element="origin.ecore#_g1IDADNdEeCDk6pqpI_fUg_Chain"
+          side="Right"/>
+    </match>
+  </rightVersion>
+</conflictreport:ConflictReport>

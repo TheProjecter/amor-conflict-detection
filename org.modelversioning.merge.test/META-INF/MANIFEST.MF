@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Merge Test
+Bundle-SymbolicName: org.modelversioning.merge.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Modelversioning.org
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.modelversioning.merge;bundle-version="1.0.0",
+ org.junit;bundle-version="3.8.2",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
+ org.modelversioning.conflicts.detection;bundle-version="1.0.0",
+ org.modelversioning.core;bundle-version="1.0.0"
