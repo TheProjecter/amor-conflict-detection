@@ -6,6 +6,9 @@
       <detector
             class="org.modelversioning.conflicts.detection.signifier.ConcurrentSignifierChangeDetection">
       </detector>
+      <detector
+            class="org.modelversioning.conflicts.detection.signifier.UnexceptedSignifierMatchDetection">
+      </detector>
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">
