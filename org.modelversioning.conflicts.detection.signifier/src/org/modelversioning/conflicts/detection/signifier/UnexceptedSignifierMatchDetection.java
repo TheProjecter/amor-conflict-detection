@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.epsilon.ecl.trace.Match;
+import org.eclipse.epsilon.ecl.trace.MatchTrace;
 import org.eclipse.epsilon.eol.exceptions.EolRuntimeException;
 import org.modelversioning.conflictreport.EquivalentChange;
 import org.modelversioning.conflictreport.conflict.Conflict;
@@ -107,6 +108,8 @@ public class UnexceptedSignifierMatchDetection extends
 	}
 
 	private void setMatchTraceToModule(IThreeWayDiffProvider threeWayDiff) {
+		MatchTrace prevMatchTrace = (MatchTrace) module.getContext()
+				.getFrameStack().get(PREV_MATCH_TRACE_VARIABLE_NAME).getValue();
 		for (EObject leftElement : leftElements) {
 			Collection<Object> rightElementsOfSameType = getElementsOfSameType(
 					leftElement, rightElements);
@@ -116,7 +119,7 @@ public class UnexceptedSignifierMatchDetection extends
 				boolean matching = actualMatchingRightElement != null
 						&& rightElement.equals(actualMatchingRightElement);
 				Match match = new Match(leftElement, rightElement, matching);
-				module.getContext().getMatchTrace().getMatches().add(match);
+				prevMatchTrace.getMatches().add(match);
 			}
 		}
 	}
@@ -141,14 +144,6 @@ public class UnexceptedSignifierMatchDetection extends
 	private void checkForUnexpectedMatch(EObject leftElement,
 			EObject rightElement) {
 		if (!isExpectedMatch(leftElement, rightElement)) {
-			Match tempMatch = module.getContext().getMatchTrace()
-					.getMatch(leftElement, rightElement);
-
-			if (tempMatch != null) {
-				tempMatch.setLeft("MOCK");
-				tempMatch.setRight("MOCK");
-			}
-
 			try {
 				Match match = module.match(leftElement, rightElement, true);
 				if (match.getRule() != null && match.isMatching()) {
@@ -156,11 +151,6 @@ public class UnexceptedSignifierMatchDetection extends
 				}
 			} catch (EolRuntimeException e) {
 				e.printStackTrace();
-			}
-
-			if (tempMatch != null) {
-				tempMatch.setLeft(leftElement);
-				tempMatch.setRight(rightElement);
 			}
 		}
 	}

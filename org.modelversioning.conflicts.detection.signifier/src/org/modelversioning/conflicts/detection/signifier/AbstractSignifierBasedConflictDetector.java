@@ -4,6 +4,7 @@ import java.io.File;
 
 import org.eclipse.epsilon.ecl.EclModule;
 import org.eclipse.epsilon.ecl.execute.EclOperationFactory;
+import org.eclipse.epsilon.ecl.trace.MatchTrace;
 import org.eclipse.epsilon.emc.emf.InMemoryEmfModel;
 import org.eclipse.epsilon.eol.EolSystem;
 import org.eclipse.epsilon.eol.execute.context.Variable;
@@ -12,6 +13,7 @@ import org.modelversioning.conflicts.detection.signifier.preferences.PreferenceC
 
 public abstract class AbstractSignifierBasedConflictDetector {
 
+	protected static final String PREV_MATCH_TRACE_VARIABLE_NAME = "prevMatchTrace";
 	protected EclModule module;
 
 	public AbstractSignifierBasedConflictDetector() {
@@ -48,6 +50,12 @@ public abstract class AbstractSignifierBasedConflictDetector {
 		module.getContext().getFrameStack().put(contextVariable);
 		Variable selfVariable = Variable.createReadOnlyVariable("self", module);
 		module.getContext().getFrameStack().put(selfVariable);
+		// add previous match trace
+		// the previous match trace allows implementations to add their own
+		// custom match trace
+		Variable prevMatchTraceVariable = Variable.createReadOnlyVariable(
+				PREV_MATCH_TRACE_VARIABLE_NAME, new MatchTrace());
+		module.getContext().getFrameStack().put(prevMatchTraceVariable);
 		module.parse(new File(path));
 	}
 

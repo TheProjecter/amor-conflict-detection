@@ -89,11 +89,10 @@ public class ConcurrentSignifierChangeDetection extends
 
 	private void setMatchTraceFromMatchModelToModule(
 			IThreeWayDiffProvider threeWayDiff, Side side) {
-		module.getContext().getMatchTrace().getMatches().clear();
-
 		MatchTrace matchTrace = produceMatchTrace(threeWayDiff, side);
-		module.getContext().getMatchTrace().getMatches()
-				.addAll(matchTrace.getMatches());
+		MatchTrace prevMatchTrace = (MatchTrace) module.getContext()
+				.getFrameStack().get(PREV_MATCH_TRACE_VARIABLE_NAME).getValue();
+		prevMatchTrace.getMatches().addAll(matchTrace.getMatches());
 	}
 
 	private MatchTrace produceMatchTrace(IThreeWayDiffProvider threeWayDiff,
@@ -188,21 +187,7 @@ public class ConcurrentSignifierChangeDetection extends
 
 	private Match match(EObject originalElement, EObject revisedElement)
 			throws EolRuntimeException {
-		Match tempMatch = module.getContext().getMatchTrace()
-				.getMatch(originalElement, revisedElement);
-
-		if (tempMatch != null) {
-			tempMatch.setLeft("MOCK");
-			tempMatch.setRight("MOCK");
-		}
-
 		Match eclMatch = module.match(originalElement, revisedElement, true);
-
-		if (tempMatch != null) {
-			tempMatch.setLeft(originalElement);
-			tempMatch.setRight(revisedElement);
-		}
-
 		return eclMatch;
 	}
 
